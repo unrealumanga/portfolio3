@@ -48,41 +48,6 @@
     }
   }
 
-  /* ---------- Sector filter (index only) ---------- */
-
-  var filters = document.getElementById("filters");
-  var grid = document.getElementById("work-grid");
-
-  if (filters && grid) {
-    var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
-    var empty = document.getElementById("work-empty");
-    var countEl = document.getElementById("work-count");
-
-    filters.addEventListener("click", function (event) {
-      var button = event.target.closest(".pill");
-      if (!button) return;
-
-      var sector = button.dataset.sector;
-
-      filters.querySelectorAll(".pill").forEach(function (pill) {
-        pill.setAttribute("aria-pressed", String(pill === button));
-      });
-
-      var shown = 0;
-      cards.forEach(function (card) {
-        var list = (card.dataset.sectors || "").split("|");
-        var match = sector === "__all__" || list.indexOf(sector) !== -1;
-        card.hidden = !match;
-        if (match) shown++;
-      });
-
-      if (empty) empty.hidden = shown !== 0;
-      if (countEl) {
-        countEl.textContent = shown + (shown === 1 ? " Project" : " Projects");
-      }
-    });
-  }
-
   /* ---------- Lightbox (project pages) ---------- */
 
   var lightbox = document.getElementById("lightbox");
@@ -91,6 +56,7 @@
   if (lightbox && gallery) {
     var stageImg = document.getElementById("lightbox-img");
     var counter = document.getElementById("lightbox-count");
+    var caption = document.getElementById("lightbox-cap");
     var btnPrev = document.getElementById("lightbox-prev");
     var btnNext = document.getElementById("lightbox-next");
     var btnClose = document.getElementById("lightbox-close");
@@ -109,6 +75,9 @@
       stageImg.alt = img ? img.alt : "";
       if (counter) {
         counter.textContent = current + 1 + " / " + items.length;
+      }
+      if (caption) {
+        caption.textContent = item.dataset.cap || "";
       }
     };
 

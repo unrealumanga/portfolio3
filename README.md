@@ -6,9 +6,17 @@ Live: <https://unrealumanga.github.io/portfolio3/>
 
 A restyle of the existing portfolio in an airy, large-type, monochrome
 direction referenced from [aircenter.space](https://aircenter.space/). All
-content — 32 projects, their descriptions, their galleries and their order —
-is carried over unchanged from `unrealumanga/portfolio`, which this repo does
-not touch.
+content — 24 featured projects in their curated order, the full 36-project
+index, every gallery and every image caption — is carried over unchanged from
+the deployed `unrealumanga/portfolio`, which this repo does not touch.
+
+**Content authority.** The live site is a single self-contained `index.html`
+with its data inlined. `/home/mnm/AI_Lab/Workspace/portfolio/index.html` is
+byte-identical to what is deployed and is the source of truth.
+`scripts/extract_source.py` parses it into `data/site.json`. Note that the
+sibling `portfolio-repo/` checkout is an *abandoned earlier redesign* with
+different project names, ordering and imagery — it is not the live site and
+must not be used as a source.
 
 ## Stack
 
@@ -18,31 +26,34 @@ which is committed.
 
 - **Type:** Onest (variable, self-hosted, latin + latin-ext subsets, 48 KB)
 - **Palette:** `#fff` / `#000` / `#606060` body / `#f2f2f2` surfaces
-- **Pages:** `index.html` plus 32 static pages at `work/<slug>/`
+- **Pages:** `index.html` plus 36 static pages at `work/<key>/`
 
 Project pages render and navigate fully with JavaScript disabled. JS adds only
-sector filtering, the lightbox, and scroll reveal.
+the lightbox and scroll reveal.
 
 ## Layout
 
 ```
-data/projects.json     source of truth, copied verbatim from the origin repo
+data/site.json         extracted from the live site: featured order, index,
+                       galleries with per-image captions, sectors
 data/images.json       generated: derivative paths + intrinsic dimensions
-scripts/build_images.py  source stills/video -> WebP + MP4 derivatives
+scripts/extract_source.py  live index.html -> data/site.json
+scripts/build_images.py    source stills -> WebP derivatives
 scripts/build_site.py    data + templates -> index.html and work/*/
 scripts/verify.py        content-parity and structural assertions
 templates/             index.html, project.html ({{token}} placeholders)
 assets/css             tokens, base, layout, components
-assets/js/app.js       filter, lightbox, reveal
-assets/img/<slug>/     generated derivatives
+assets/js/app.js       lightbox, reveal
+assets/img/             generated derivatives
 ```
 
 ## Building
 
-Requires Python 3 with Pillow, and ffmpeg for the one video asset. Sources are
-read from `../portfolio-repo` and are never modified.
+Requires Python 3 with Pillow. Sources are read from `../portfolio` and are
+never modified.
 
 ```sh
+python3 scripts/extract_source.py   # re-read the live site's content
 python3 scripts/build_images.py     # --force to regenerate everything
 python3 scripts/build_site.py
 python3 scripts/verify.py
@@ -52,23 +63,33 @@ python3 -m http.server 8899         # then open http://localhost:8899/
 `build_images.py` is idempotent — a derivative newer than its source is
 skipped, so re-runs are cheap.
 
+## Content model
+
+| Piece | Count |
+|:--|:--|
+| Featured cards (curated order, wide/narrow rhythm) | 24 |
+| Project index rows | 36 |
+| Galleries | 36 |
+| Gallery images, with captions | 170 |
+| Sectors | 5 |
+
+The featured grid, the index and prev/next each keep their own deliberate
+order, inherited from the live site rather than derived. Project pages are
+generated for all 36 and paged in index order, since every project appears
+there while only 24 are featured.
+
 ## Image pipeline
 
-356 referenced assets, 386 MB at source, **105 MB** after processing.
+171 referenced assets, 19.5 MB at source, **21 MB** after processing (WebP at
+two widths). Sources are already web-sized at 1100×614 and 1600×900.
 
 | Tier | Purpose |
 |:--|:--|
-| `-640.webp` | work-grid cards at 1x, mobile |
-| `-1280.webp` | work-grid cards at 2x |
-| `-1920.webp` | project gallery and lightbox |
+| `-640.webp` | narrow cards, mobile |
+| `-1600.webp` | wide cards, gallery, lightbox |
 
-One gallery item is a video (Saudi Tadawul CMF). It is re-encoded from 45 MB
-h264 at ~7 Mbps to 10.6 MB at CRF 24 with `+faststart`, and a poster frame is
-extracted. Resolution is unchanged at 1280×720.
-
-Derivative filenames carry a hash of the source path: several source
-filenames slugify identically (Beeah has both `18. Majilis Area_upscale01.jpg`
-and `18.-Majilis-Area_upscale01.jpg`) and would otherwise collide.
+Neither tier upscales. Derivative filenames carry a hash of the source path to
+keep distinct sources on distinct outputs.
 
 ## Design rules
 
@@ -76,27 +97,19 @@ Built against `OBNOTES/llm-guideline-01-websites.md`. Notable points:
 
 - The reference site uses `#8d8d8d` for body copy — 3.03:1 on white, which
   fails WCAG 2.2 SC 1.4.3. Body copy here is `#606060` (5.92:1).
-- Every `<img>` and `<video>` carries explicit `width`/`height` from
-  `images.json`, so nothing shifts on load.
-- The hero is sized so the stats rule and the top of the figures are cut by the
-  fold on a 900 px viewport — the page cannot read as complete.
+- Every `<img>` carries explicit `width`/`height` from `images.json`, so
+  nothing shifts on load.
+- The hero is sized so the figures rule is cut by the fold on a 900 px
+  viewport — the page cannot read as complete.
 - The first gallery image on each project page is preloaded as the LCP element;
   everything below is lazy.
-- Filter state is conveyed by fill inversion plus `aria-pressed`, never by
-  colour alone.
 
-`scripts/verify.py` asserts content parity against `projects.json` and the
-structural rules above. It runs 1043 checks.
-
-## Known data gap
-
-`JETEX-AERO-2026` has an empty `description` and `client` in the source data.
-Per the content-parity decision this is carried over as-is: the page renders
-title, sectors and gallery, and omits those blocks rather than emitting empty
-elements.
+`scripts/verify.py` asserts content parity against `data/site.json` *and*
+re-parses the live source to confirm the featured order, the wide/narrow
+rhythm and the index order still match. It runs 890 checks.
 
 ## Relationship to the existing site
 
 `unrealumanga/portfolio` and its published site are untouched. This repo reads
-from `../portfolio-repo` at build time only. Nothing here writes to, commits
-to, or deploys over it.
+`../portfolio/index.html` and `../portfolio/img/` at build time only. Nothing
+here writes to, commits to, or deploys over it.

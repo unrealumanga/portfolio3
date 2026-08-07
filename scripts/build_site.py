@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Render index.html and work/<slug>/index.html from data + templates.
+"""Render index.html and work/<key>/index.html from data/site.json.
 
-Templates are plain HTML with {{token}} placeholders. Every interpolated value
-is HTML-escaped. Project pages are emitted in projects.json array order, so
-prev/next follows the same sequence as the work index.
+Ordering is inherited from the live site and is deliberate, not derived:
+ - the featured grid keeps the curated 24-card order and its wide/narrow rhythm
+ - the project index keeps its own 36-row order (alphabetical by client)
+ - prev/next on project pages follows the index order, since every project
+   appears there while only 24 are featured
 """
 
 import html
@@ -14,8 +16,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = ROOT / "templates"
 
-CARD_SIZES = "(min-width: 1280px) 31vw, (min-width: 700px) 47vw, 92vw"
+WIDE_SIZES = "(min-width: 900px) 56vw, 92vw"
+NARROW_SIZES = "(min-width: 900px) 37vw, 92vw"
 GALLERY_SIZES = "(min-width: 1720px) 1656px, 92vw"
+HERO_SIZES = "92vw"
 
 
 def esc(value):
@@ -29,223 +33,203 @@ def fill(template, values):
     return out
 
 
-def load():
-    projects = json.loads((ROOT / "data" / "projects.json").read_text())
-    images = json.loads((ROOT / "data" / "images.json").read_text())
-    return projects, images
-
-
-def srcset(entry, widths):
+def srcset(entry, prefix=""):
     parts = []
-    for width in widths:
-        tier = entry.get(str(width))
+    for width in ("640", "1600"):
+        tier = entry.get(width)
         if tier:
-            parts.append(f"{tier['src']} {tier['w']}w")
+            parts.append(f"{prefix}{tier['src']} {tier['w']}w")
     return ", ".join(parts)
 
 
-def largest(entry):
-    """Widest still tier available for an image entry."""
-    tiers = [entry[k] for k in ("1920", "1280", "640") if k in entry]
-    return tiers[0] if tiers else None
+def widest(entry):
+    return entry.get("1600") or entry.get("640")
 
 
-def render_card(project, index, images, prefix=""):
-    thumb = project.get("thumbnail")
-    entry = images.get(thumb) or {}
-    tier = entry.get("640") or largest(entry)
-    if not tier:
+def sub_line(item):
+    bits = [item.get("client"), item.get("type"), item.get("year")]
+    return " · ".join(b for b in bits if b)
+
+
+def render_card(card, position, images):
+    entry = images.get(card["kv"])
+    if not entry:
         return ""
-
-    sectors = " · ".join(project.get("sectors") or [])
-    gallery_n = len(project.get("gallery") or [])
-    # W30: the first three cards are the plausible LCP candidates on the index.
-    eager = index < 3
-    loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
-
-    return f"""<a class="card" href="{prefix}work/{esc(project['slug'])}/"
-   data-sectors="{esc('|'.join(project.get('sectors') or []))}">
+    tier = entry.get("1600") if card["span"] == "wide" else entry.get("640")
+    tier = tier or widest(entry)
+    sizes = WIDE_SIZES if card["span"] == "wide" else NARROW_SIZES
+    # W30: the first two cards are the LCP candidates in the grid.
+    loading = (
+        'loading="eager" fetchpriority="high"' if position < 2 else 'loading="lazy"'
+    )
+    return f"""<a class="card card--{card['span']}" href="work/{esc(card['key'])}/">
   <div class="card-frame">
-    <span class="card-index">{index + 1:02d}</span>
     <img src="{esc(tier['src'])}"
-         srcset="{esc(srcset(entry, (640, 1280)))}"
-         sizes="{CARD_SIZES}"
+         srcset="{esc(srcset(entry))}" sizes="{sizes}"
          width="{tier['w']}" height="{tier['h']}"
-         alt="{esc(project.get('title'))} — {esc(project.get('client') or 'project')} visual"
+         alt="{esc(card['title'])}"
          {loading} decoding="async" />
   </div>
-  <div class="card-body">
+  <div class="card-meta">
+    <span class="micro card-no">{position + 1:02d}</span>
     <div>
-      <div class="card-title">{esc(project.get('title'))}</div>
-      <p class="micro card-client">{esc(project.get('client') or sectors)}</p>
+      <h3 class="card-title">{esc(card['title'])}</h3>
+      <p class="micro card-sub">{esc(sub_line(card))}</p>
     </div>
-    <span class="micro card-count">{gallery_n}</span>
   </div>
 </a>"""
 
 
-def render_gallery(project, images):
+def render_index_row(row):
+    return f"""<a class="index-row" href="work/{esc(row['key'])}/">
+  <span class="micro idx-no">{esc(row['no'])}</span>
+  <span class="idx-name">{esc(row['title'])}<span class="micro cl">{esc(row['client'])}</span></span>
+  <span class="micro idx-cat">{esc(row['type'])}</span>
+  <span class="micro idx-year">{esc(row['year'])}</span>
+</a>"""
+
+
+def render_gallery(gallery, images):
     out = []
-    for i, ref in enumerate(project.get("gallery") or []):
-        entry = images.get(ref)
+    for i, image in enumerate(gallery["images"]):
+        entry = images.get(image["src"])
         if not entry:
             continue
-        title = esc(project.get("title"))
-
-        if entry.get("type") == "video":
-            poster = entry["poster"]
-            out.append(
-                f"""<video class="gallery-item" controls preload="none"
-       poster="../../{esc(poster['src'])}"
-       width="{entry['w']}" height="{entry['h']}">
-  <source src="../../{esc(entry['video'])}" type="video/mp4" />
-  Your browser does not support embedded video.
-</video>"""
-            )
-            continue
-
-        tier = entry.get("1920") or largest(entry)
-        # W30: first image is the LCP element -- eager, high priority.
+        tier = widest(entry)
+        caption = image.get("cap") or ""
+        alt = f"{gallery['name']} — {caption}" if caption else gallery["name"]
         loading = (
             'loading="eager" fetchpriority="high"' if i == 0 else 'loading="lazy"'
         )
-        full = tier["src"]
+        cap_html = (
+            f'<figcaption class="micro gallery-cap">{esc(caption)}</figcaption>'
+            if caption
+            else ""
+        )
         out.append(
-            f"""<button class="gallery-item" type="button"
-        data-full="../../{esc(full)}" data-index="{i}"
-        aria-label="Open image {i + 1} full size">
-  <img src="../../{esc(tier['src'])}"
-       srcset="{esc(', '.join(f'../../{t}' for t in srcset(entry, (640, 1280, 1920)).split(', ')))}"
-       sizes="{GALLERY_SIZES}"
-       width="{tier['w']}" height="{tier['h']}"
-       alt="{title} — view {i + 1}"
-       {loading} decoding="async" />
-</button>"""
+            f"""<figure class="gallery-figure">
+  <button class="gallery-item" type="button"
+          data-full="../../{esc(tier['src'])}" data-cap="{esc(caption)}"
+          aria-label="Open image {i + 1} of {len(gallery['images'])} full size">
+    <img src="../../{esc(tier['src'])}"
+         srcset="{esc(srcset(entry, '../../'))}" sizes="{GALLERY_SIZES}"
+         width="{tier['w']}" height="{tier['h']}"
+         alt="{esc(alt)}"
+         {loading} decoding="async" />
+  </button>
+  {cap_html}
+</figure>"""
         )
     return "\n".join(out)
 
 
-def render_index(projects, images):
+def render_index(site, images):
     template = (TEMPLATES / "index.html").read_text()
 
-    sector_counts = {}
-    for project in projects:
-        for sector in project.get("sectors") or []:
-            sector_counts[sector] = sector_counts.get(sector, 0) + 1
-    ordered_sectors = sorted(sector_counts.items(), key=lambda kv: (-kv[1], kv[0]))
-
-    filters = [
-        '<button class="pill" type="button" data-sector="__all__" '
-        f'aria-pressed="true">All<span class="count">{len(projects)}</span></button>'
+    cards = [render_card(c, i, images) for i, c in enumerate(site["featured"])]
+    rows = [render_index_row(r) for r in site["index"]]
+    sectors = [
+        f'<li class="sector-row"><span class="sector-row-name">{esc(s["name"])}</span>'
+        f'<span class="micro">{esc(s["count"])}</span></li>'
+        for s in site["sectors"]
     ]
-    for sector, count in ordered_sectors:
-        filters.append(
-            '<button class="pill" type="button" '
-            f'data-sector="{esc(sector)}" aria-pressed="false">{esc(sector)}'
-            f'<span class="count">{count}</span></button>'
+
+    hero_entry = images.get("img/hero.jpg")
+    hero_html, lcp_preload, og_image = "", "", ""
+    if hero_entry:
+        tier = widest(hero_entry)
+        hero_html = (
+            f'<img src="{esc(tier["src"])}" srcset="{esc(srcset(hero_entry))}" '
+            f'sizes="{HERO_SIZES}" width="{tier["w"]}" height="{tier["h"]}" '
+            f'alt="Trojena Mobile Pavilion, NEOM" '
+            f'loading="eager" fetchpriority="high" decoding="async" />'
         )
-
-    rows = [
-        f'<li class="sector-row"><span class="sector-row-name">{esc(s)}</span>'
-        f'<span class="micro">{c} project{"s" if c != 1 else ""}</span></li>'
-        for s, c in ordered_sectors
-    ]
-
-    cards = [render_card(p, i, images) for i, p in enumerate(projects)]
-
-    first_thumb = images.get(projects[0].get("thumbnail"), {})
-    og_tier = first_thumb.get("1280") or largest(first_thumb) or {"src": ""}
+        lcp_preload = (
+            f'<link rel="preload" as="image" href="{esc(tier["src"])}" '
+            f'imagesrcset="{esc(srcset(hero_entry))}" imagesizes="{HERO_SIZES}" '
+            f'fetchpriority="high" />'
+        )
+        og_image = esc(tier["src"])
 
     return fill(
         template,
         {
-            "stat_projects": str(len(projects)),
-            "stat_sectors": str(len(sector_counts)),
-            "filters": "\n          ".join(filters),
             "work_grid": "\n          ".join(cards),
-            "sector_rows": "\n            ".join(rows),
-            "og_image": esc(og_tier["src"]),
+            "index_rows": "\n          ".join(rows),
+            "index_count": str(len(site["index"])),
+            "sector_rows": "\n          ".join(sectors),
+            "hero_image": hero_html,
+            "lcp_preload": lcp_preload,
+            "og_image": og_image,
         },
     )
 
 
-def render_project(project, index, projects, images):
+def render_project(row, position, order, site, images):
     template = (TEMPLATES / "project.html").read_text()
-    total = len(projects)
-    prev_p = projects[index - 1] if index > 0 else None
-    next_p = projects[(index + 1) % total]
+    gallery = site["galleries"][row["key"]]
+    total = len(order)
+    prev_row = order[position - 1] if position > 0 else None
+    next_row = order[(position + 1) % total]
 
     prev_link = (
-        f'<a class="icon-btn" href="../{esc(prev_p["slug"])}/" '
-        f'aria-label="Previous project: {esc(prev_p["title"])}">&larr;</a>'
-        if prev_p
+        f'<a class="icon-btn" href="../{esc(prev_row["key"])}/" '
+        f'aria-label="Previous project: {esc(prev_row["title"])}">&larr;</a>'
+        if prev_row
         else '<span class="icon-btn" aria-disabled="true" aria-hidden="true">&larr;</span>'
     )
     next_link = (
-        f'<a class="icon-btn" href="../{esc(next_p["slug"])}/" '
-        f'aria-label="Next project: {esc(next_p["title"])}">&rarr;</a>'
+        f'<a class="icon-btn" href="../{esc(next_row["key"])}/" '
+        f'aria-label="Next project: {esc(next_row["title"])}">&rarr;</a>'
     )
 
     meta_items = []
-    if project.get("client"):
-        meta_items.append(
-            f'<div class="project-meta-item"><dt>Client</dt>'
-            f'<dd>{esc(project["client"])}</dd></div>'
-        )
-    if project.get("year"):
-        meta_items.append(
-            f'<div class="project-meta-item"><dt>Year</dt>'
-            f'<dd>{esc(project["year"])}</dd></div>'
-        )
-    gallery_n = len(project.get("gallery") or [])
+    for label, value in (
+        ("Client", row.get("client")),
+        ("Sector", row.get("type")),
+        ("Year", row.get("year")),
+    ):
+        if value:
+            meta_items.append(
+                f'<div class="project-meta-item"><dt>{label}</dt>'
+                f"<dd>{esc(value)}</dd></div>"
+            )
     meta_items.append(
-        f'<div class="project-meta-item"><dt>Visuals</dt><dd>{gallery_n}</dd></div>'
+        f'<div class="project-meta-item"><dt>Visuals</dt>'
+        f'<dd>{len(gallery["images"])}</dd></div>'
     )
 
-    description = (project.get("description") or "").strip()
-    description_block = (
-        f'<p class="lead project-description">{esc(description)}</p>'
-        if description
-        else ""
-    )
-
-    sectors = " · ".join(project.get("sectors") or []) or "Project"
-    meta_description = description[:180] if description else (
-        f'{project.get("title")} — spatial design project by '
-        f"Hethusha Umanga Seneviratne."
-    )
-
-    # LCP preload for the first gallery still.
-    lcp_preload = ""
-    og_image = ""
-    for ref in project.get("gallery") or []:
-        entry = images.get(ref)
-        if entry and entry.get("type") != "video":
-            tier = entry.get("1920") or largest(entry)
+    lcp_preload, og_image = "", ""
+    if gallery["images"]:
+        entry = images.get(gallery["images"][0]["src"])
+        if entry:
+            tier = widest(entry)
             lcp_preload = (
                 f'<link rel="preload" as="image" href="../../{esc(tier["src"])}" '
-                f'imagesrcset="{esc(", ".join(f"../../{t}" for t in srcset(entry, (640, 1280, 1920)).split(", ")))}" '
+                f'imagesrcset="{esc(srcset(entry, "../../"))}" '
                 f'imagesizes="{GALLERY_SIZES}" fetchpriority="high" />'
             )
-            og_image = esc((entry.get("1280") or tier)["src"])
-            break
+            og_image = esc(tier["src"])
 
     return fill(
         template,
         {
-            "title": esc(project.get("title")),
-            "slug": esc(project.get("slug")),
-            "sectors": esc(sectors),
+            "title": esc(row["title"]),
+            "key": esc(row["key"]),
+            "sub": esc(sub_line(row)),
             "meta_items": "\n            ".join(meta_items),
-            "description_block": description_block,
-            "meta_description": esc(meta_description),
-            "gallery": render_gallery(project, images),
-            "position": f"{index + 1:02d}",
+            "meta_description": esc(
+                f"{row['title']} — {sub_line(row)}. Spatial design by "
+                f"Hethusha Umanga Seneviratne."
+            ),
+            "gallery": render_gallery(gallery, images),
+            "position": f"{position + 1:02d}",
             "total": f"{total:02d}",
             "prev_link": prev_link,
             "next_link": next_link,
-            "next_href": f'../{esc(next_p["slug"])}/',
-            "next_title": esc(next_p["title"]),
+            "next_href": f'../{esc(next_row["key"])}/',
+            "next_title": esc(next_row["title"]),
+            "next_sub": esc(sub_line(next_row)),
             "lcp_preload": lcp_preload,
             "og_image": og_image,
         },
@@ -253,24 +237,27 @@ def render_project(project, index, projects, images):
 
 
 def main():
-    projects, images = load()
+    site = json.loads((ROOT / "data" / "site.json").read_text())
+    images = json.loads((ROOT / "data" / "images.json").read_text())
 
-    (ROOT / "index.html").write_text(render_index(projects, images))
-    print(f"index.html          ({len(projects)} cards)")
+    (ROOT / "index.html").write_text(render_index(site, images))
+    print(f"index.html          ({len(site['featured'])} cards, "
+          f"{len(site['index'])} index rows)")
 
     work_dir = ROOT / "work"
     if work_dir.exists():
         shutil.rmtree(work_dir)
 
-    for i, project in enumerate(projects):
-        out_dir = work_dir / project["slug"]
+    order = site["index"]
+    for i, row in enumerate(order):
+        out_dir = work_dir / row["key"]
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "index.html").write_text(render_project(project, i, projects, images))
+        (out_dir / "index.html").write_text(
+            render_project(row, i, order, site, images)
+        )
+    print(f"work/*/index.html   ({len(order)} pages)")
 
-    print(f"work/*/index.html   ({len(projects)} pages)")
-
-    leftover = [t for t in ("{{", "}}") if t in (ROOT / "index.html").read_text()]
-    if leftover:
+    if "{{" in (ROOT / "index.html").read_text():
         print("! unsubstituted tokens remain in index.html")
         return 1
     return 0

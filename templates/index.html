@@ -6,14 +6,14 @@
     <title>Hethusha Umanga Seneviratne | Experiential Designer</title>
     <meta
       name="description"
-      content="Experiential designer based in Dubai. Translating brand strategy into spatial experiences — exhibition stands, sales centres, pavilions and corporate environments across the UAE and the GCC."
+      content="Experiential designer based in Dubai. Two decades translating brand strategy into dynamic, three-dimensional worlds — exhibitions, national pavilions, experience centres and workplaces across the GCC."
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://unrealumanga.github.io/portfolio3/" />
     <meta property="og:title" content="Hethusha Umanga Seneviratne | Experiential Designer" />
     <meta
       property="og:description"
-      content="Spatial design portfolio — exhibitions, sales centres, pavilions and corporate environments."
+      content="Exhibitions, national pavilions, experience centres and workplaces across the GCC."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://unrealumanga.github.io/portfolio3/" />
@@ -22,6 +22,7 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3C/svg%3E" />
 
     <link rel="preload" href="assets/fonts/onest-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+    {{lcp_preload}}
     <link rel="stylesheet" href="assets/css/tokens.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
@@ -36,12 +37,12 @@
     <header class="site-header" id="site-header">
       <div class="wrap">
         <a class="wordmark" href="#top"
-          >Hethusha Umanga<span class="wordmark-tail"> Seneviratne</span></a
+          >Hethusha<span class="wordmark-tail"> Umanga</span></a
         >
         <nav class="site-nav" aria-label="Primary">
           <a href="#work">Work</a>
-          <a href="#studio" class="is-secondary">Studio</a>
-          <a href="#capabilities" class="is-secondary">Capabilities</a>
+          <a href="#index" class="is-secondary">Index</a>
+          <a href="#ai" class="is-secondary">How I Work</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -50,172 +51,159 @@
     <main id="main">
       <span id="top"></span>
 
-      <!-- Hero: h1 and the single primary CTA sit inside the first 1080px (W01) -->
+      <!-- W01: h1 and the single primary CTA sit inside the first 1080px -->
       <section class="hero wrap">
         <p class="micro">Experiential Designer — Dubai, UAE</p>
-        <h1>Creating spaces that respond to people</h1>
-        <p class="lead hero-lead">
-          Two decades translating brand strategy into dynamic, three-dimensional
-          worlds — exhibition stands, sales centres, pavilions and corporate
-          environments across the UAE and the wider GCC.
-        </p>
+        <h1>Creating spaces that respond to people.</h1>
+        <div class="hero-meta">
+          <div class="hero-figures">
+            <div>
+              <div class="figure">20<sup>+</sup></div>
+              <p class="micro figure-label">Years of practice</p>
+            </div>
+            <div>
+              <div class="figure">36+</div>
+              <p class="micro figure-label">Selected projects</p>
+            </div>
+            <div>
+              <div class="figure">5</div>
+              <p class="micro figure-label">Sectors</p>
+            </div>
+          </div>
+          <p class="lead hero-lede">
+            Two decades translating brand strategy into dynamic,
+            three-dimensional worlds — exhibitions, national pavilions,
+            experience centres and workplaces across the GCC.
+          </p>
+        </div>
         <div class="hero-actions">
-          <a class="btn btn--primary" href="#work">View Projects</a>
+          <a class="btn btn--primary" href="#work">View Work</a>
           <a class="btn btn--ghost" href="#contact">
             Get in Touch <span class="arrow" aria-hidden="true">&rarr;</span>
           </a>
         </div>
-        <div class="hero-stats">
-          <div>
-            <div class="figure">{{stat_projects}}</div>
-            <p class="micro figure-label">Projects</p>
-          </div>
-          <div>
-            <div class="figure">20+</div>
-            <p class="micro figure-label">Years Practicing</p>
-          </div>
-          <div>
-            <div class="figure">{{stat_sectors}}</div>
-            <p class="micro figure-label">Sectors Served</p>
-          </div>
-        </div>
       </section>
+
+      <figure class="hero-figure wrap">
+        {{hero_image}}
+        <figcaption class="figcap">
+          <span class="micro">Trojena Mobile Pavilion — NEOM</span>
+          <span class="micro">Kingdom of Saudi Arabia, 2024</span>
+        </figcaption>
+      </figure>
 
       <section class="section wrap" id="work">
-        <div class="section-label">
-          <span class="micro num">01</span>
-          <span class="micro">Selected Work</span>
-        </div>
         <div class="section-head">
-          <h2 data-reveal>Selected Work</h2>
-          <p class="micro" id="work-count">{{stat_projects}} Projects</p>
+          <div class="kicker">
+            <span class="micro num">01</span>
+            <h2>Selected Work</h2>
+          </div>
+          <p class="micro">Click any project to view its gallery — 2018 — 2026</p>
         </div>
 
-        <div class="filters" id="filters" role="group" aria-label="Filter projects by sector">
-          {{filters}}
-        </div>
-
-        <div class="work-grid" id="work-grid">
+        <div class="work-grid">
           {{work_grid}}
         </div>
-        <p class="work-empty lead" id="work-empty" hidden>No projects in this sector yet.</p>
       </section>
 
-      <section class="section wrap" id="studio">
-        <div class="section-label">
-          <span class="micro num">02</span>
-          <span class="micro">Studio &amp; Process</span>
-        </div>
-        <h2 class="visually-hidden">Studio &amp; Process</h2>
-        <p class="lead measure" data-reveal>
-          <strong>Hethusha Umanga Seneviratne</strong> is an experiential designer
-          based in Dubai, working at the intersection of brand strategy and
-          spatial storytelling — shaping how people move through, and feel
-          inside, a built environment.
-        </p>
-
-        <div class="process">
-          <div class="process-step" data-reveal>
-            <p class="micro">01 / Concept &amp; Narrative</p>
-            <h3>Concept</h3>
-            <p>
-              Brand strategy is translated into a spatial story — zoning,
-              sequence and moments of arrival that give a brand a place to live
-              in three dimensions.
-            </p>
-          </div>
-          <div class="process-step" data-reveal>
-            <p class="micro">02 / Design &amp; Coordination</p>
-            <h3>Coordination</h3>
-            <p>
-              Concepts are resolved into buildable drawings and photoreal
-              visuals, coordinated across architects, fabricators and
-              contractors ahead of build.
-            </p>
-          </div>
-          <div class="process-step" data-reveal>
-            <p class="micro">03 / Build &amp; Handover</p>
-            <h3>Delivery</h3>
-            <p>
-              On-site through fit-out and installation, resolving the
-              inevitable — until the space is show-ready and handed over.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section wrap" id="capabilities">
-        <div class="section-label">
-          <span class="micro num">03</span>
-          <span class="micro">Scope of Work</span>
-        </div>
+      <section class="section wrap" id="index">
         <div class="section-head">
-          <h2 data-reveal>Scope of Work</h2>
+          <div class="kicker">
+            <span class="micro num">02</span>
+            <h2>Project Index</h2>
+          </div>
+          <p class="micro">Complete record — {{index_count}} projects, click to view</p>
         </div>
-        <div class="capabilities">
-          <div class="capability" data-reveal>
-            <p class="micro">N&ordm;01</p>
-            <h3>Exhibition Stands &amp; Pavilions</h3>
-            <p>National and corporate pavilions, GITEX-scale stands, mobile pavilions.</p>
+
+        <div class="index-table">
+          <div class="index-row index-head" aria-hidden="true">
+            <span class="micro">No.</span>
+            <span class="micro">Project</span>
+            <span class="micro">Sector</span>
+            <span class="micro idx-year">Year</span>
           </div>
-          <div class="capability" data-reveal>
-            <p class="micro">N&ordm;02</p>
-            <h3>Sales &amp; Experience Centres</h3>
-            <p>Real estate sales galleries and brand experience centres designed to convert.</p>
+          {{index_rows}}
+        </div>
+      </section>
+
+      <section class="section section--surface" id="ai">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="kicker">
+              <span class="micro num">03</span>
+              <h2>How I Work</h2>
+            </div>
+            <p class="micro">An AI-augmented practice</p>
           </div>
-          <div class="capability" data-reveal>
-            <p class="micro">N&ordm;03</p>
-            <h3>Corporate Workplace &amp; HQ</h3>
-            <p>Headquarters and workplace environments that carry brand into daily use.</p>
-          </div>
-          <div class="capability" data-reveal>
-            <p class="micro">N&ordm;04</p>
-            <h3>3D Visualization</h3>
-            <p>Photoreal renders and walkthroughs used to sell-in concepts before a single wall goes up.</p>
+
+          <p class="lead measure" data-reveal>
+            I don't just use AI tools — <strong>I build them.</strong> Outside
+            project hours I run a working lab: AI agents wired directly into the
+            3D software I design with. The result on live work is simple — more
+            options explored per deadline, faster client iterations, and
+            visualisation in hours instead of days. All tooling built in-house
+            and run on my own hardware — Houdini/Karma, Blender, USD, MaterialX,
+            self-hosted language and vision models.
+          </p>
+
+          <div class="capabilities">
+            <div class="capability" data-reveal>
+              <p class="micro">i</p>
+              <h3>AI agents inside the 3D pipeline</h3>
+              <p>
+                I've bridged AI assistants directly into Houdini and Blender, so
+                scenes, materials and lighting can be directed conversationally
+                while I stay focused on the design decision, not the software.
+              </p>
+            </div>
+            <div class="capability" data-reveal>
+              <p class="micro">ii</p>
+              <h3>Reference image to built scene</h3>
+              <p>
+                Vision pipelines that read a reference image, plan the scene,
+                build it step-by-step and verify the result against the original.
+              </p>
+            </div>
+            <div class="capability" data-reveal>
+              <p class="micro">iii</p>
+              <h3>Custom models, run privately</h3>
+              <p>
+                I author and self-host my own AI models, tuned to specific tools
+                and tasks. Client work never leaves my machines.
+              </p>
+            </div>
+            <div class="capability" data-reveal>
+              <p class="micro">iv</p>
+              <h3>Automated asset pipelines</h3>
+              <p>
+                SketchUp to USD to Houdini with no manual cleanup, code-generated
+                material libraries, scripted look-dev turntables.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section wrap" id="sectors">
-        <div class="section-label">
-          <span class="micro num">04</span>
-          <span class="micro">Sectors</span>
-        </div>
         <div class="section-head">
-          <h2 data-reveal>Sectors</h2>
-        </div>
-        <div class="sectors-layout">
-          <ul data-reveal>
-            {{sector_rows}}
-          </ul>
-          <div class="stat-block" data-reveal>
-            <div>
-              <div class="figure">{{stat_projects}}</div>
-              <p class="micro figure-label">Projects Delivered</p>
-            </div>
-            <div>
-              <div class="figure">{{stat_sectors}}</div>
-              <p class="micro figure-label">Sectors Served</p>
-            </div>
-            <div>
-              <div class="figure">20+</div>
-              <p class="micro figure-label">Years Practicing</p>
-            </div>
-            <div>
-              <div class="figure">UAE&nbsp;/&nbsp;KSA</div>
-              <p class="micro figure-label">Core Markets</p>
-            </div>
+          <div class="kicker">
+            <span class="micro num">04</span>
+            <h2>Sectors</h2>
           </div>
+          <p class="micro">Fields of practice</p>
         </div>
+        <ul data-reveal>
+          {{sector_rows}}
+        </ul>
       </section>
 
       <section class="section wrap" id="contact">
         <div class="section-label">
-          <span class="micro num">05</span>
           <span class="micro">Contact</span>
         </div>
         <h2 class="contact-heading" data-reveal>
-          Let's build the <a href="mailto:hethusha@gmail.com">next space</a>.
+          Let's build the <a href="mailto:hethusha@gmail.com">next space</a>
+          together.
         </h2>
         <div class="contact-grid">
           <div class="contact-item" data-reveal>
@@ -228,8 +216,8 @@
             <p><a href="tel:+971505126217">+971 50 512 6217</a></p>
           </div>
           <div class="contact-item" data-reveal>
-            <h3>Location</h3>
-            <p>Dubai, UAE</p>
+            <h3>Based in</h3>
+            <p>Dubai,<br />United Arab Emirates</p>
           </div>
         </div>
       </section>

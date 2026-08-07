@@ -6,11 +6,11 @@
     <title>{{title}} — Hethusha Umanga Seneviratne</title>
     <meta name="description" content="{{meta_description}}" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="canonical" href="https://unrealumanga.github.io/portfolio3/work/{{slug}}/" />
+    <link rel="canonical" href="https://unrealumanga.github.io/portfolio3/work/{{key}}/" />
     <meta property="og:title" content="{{title}} — Hethusha Umanga Seneviratne" />
     <meta property="og:description" content="{{meta_description}}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://unrealumanga.github.io/portfolio3/work/{{slug}}/" />
+    <meta property="og:url" content="https://unrealumanga.github.io/portfolio3/work/{{key}}/" />
     <meta property="og:image" content="https://unrealumanga.github.io/portfolio3/{{og_image}}" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3C/svg%3E" />
@@ -45,12 +45,11 @@
     <main id="main">
       <article>
         <div class="project-hero wrap">
-          <p class="micro">{{sectors}}</p>
+          <p class="micro">{{sub}}</p>
           <h1>{{title}}</h1>
           <dl class="project-meta">
             {{meta_items}}
           </dl>
-          {{description_block}}
         </div>
 
         <div class="gallery wrap" id="gallery">
@@ -63,11 +62,13 @@
           <span class="micro">Next Project</span>
         </div>
         <h2><a href="{{next_href}}">{{next_title}}</a></h2>
+        <p class="micro next-sub">{{next_sub}}</p>
       </section>
 
       <section class="section wrap" id="contact">
         <h2 class="contact-heading" data-reveal>
-          Let's build the <a href="mailto:hethusha@gmail.com">next space</a>.
+          Let's build the <a href="mailto:hethusha@gmail.com">next space</a>
+          together.
         </h2>
         <div class="contact-grid">
           <div class="contact-item" data-reveal>
@@ -80,8 +81,8 @@
             <p><a href="tel:+971505126217">+971 50 512 6217</a></p>
           </div>
           <div class="contact-item" data-reveal>
-            <h3>Location</h3>
-            <p>Dubai, UAE</p>
+            <h3>Based in</h3>
+            <p>Dubai,<br />United Arab Emirates</p>
           </div>
         </div>
       </section>
@@ -106,6 +107,7 @@
       <div class="lightbox-stage">
         <img src="" alt="" id="lightbox-img" />
       </div>
+      <p class="lightbox-cap micro" id="lightbox-cap"></p>
     </div>
 
     <script src="../../assets/js/app.js" defer></script>

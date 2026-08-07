@@ -123,7 +123,7 @@
   position: relative;
   overflow: hidden;
   background: var(--surface);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
 
 .card-frame img {
@@ -137,26 +137,17 @@
   transform: scale(1.03);
 }
 
-.card-index {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 0.5rem 0.85rem;
-  background: var(--bg);
-  font-size: var(--fs-micro);
-  letter-spacing: var(--ls-micro);
-  font-weight: 500;
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-
-.card-body {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.card-meta {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: start;
   gap: var(--s-2);
   margin-top: var(--s-3);
+}
+
+.card-no {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
 }
 
 .card-title {
@@ -172,20 +163,15 @@
   text-underline-offset: 0.18em;
 }
 
-.card-client {
+.card-sub {
   margin-top: 0.35rem;
 }
 
-.card-count {
-  flex: none;
-  font-variant-numeric: tabular-nums;
-}
-
-.work-empty {
-  padding-block: var(--s-5);
-}
-
 /* ---------- Gallery ---------- */
+
+.gallery-figure {
+  margin: 0;
+}
 
 .gallery-item {
   position: relative;
@@ -193,11 +179,21 @@
   width: 100%;
   background: var(--surface);
   cursor: zoom-in;
+  padding: 0;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
+}
+
+.gallery-cap {
+  margin-top: var(--s-2);
+}
+
+.lightbox-cap {
+  padding: 0 var(--pad) var(--s-3);
+  text-align: center;
 }
 
 /* ---------- Lightbox ---------- */
@@ -214,7 +210,7 @@
 .lightbox[open],
 .lightbox.is-open {
   display: grid;
-  grid-template-rows: var(--header-h) 1fr;
+  grid-template-rows: var(--header-h) 1fr auto;
 }
 
 .lightbox-bar {

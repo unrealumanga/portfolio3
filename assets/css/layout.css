@@ -114,6 +114,17 @@
   flex: 1 1 22ch;
 }
 
+.kicker {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(1rem, 2vw, 2rem);
+  flex: 1 1 24ch;
+}
+
+.next-sub {
+  margin-top: var(--s-2);
+}
+
 .section-label {
   display: flex;
   align-items: baseline;
@@ -177,23 +188,158 @@
   margin-top: 0.5rem;
 }
 
-/* ---------- Work grid ---------- */
+/* ---------- Hero figure ---------- */
 
-.work-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2.5rem, 5vw, 4.5rem) var(--gutter);
+.hero-figure {
+  margin: 0 auto;
+  padding-bottom: var(--s-6);
 }
 
-@media (min-width: 700px) {
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr);
+.hero-figure img {
+  width: 100%;
+  height: auto;
+  background: var(--surface);
+}
+
+.figcap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-1) var(--s-3);
+  margin-top: var(--s-2);
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4) clamp(2rem, 5vw, 5rem);
+  margin-top: clamp(1.75rem, 4vh, 3rem);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+
+@media (min-width: 900px) {
+  .hero-meta {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
   }
 }
 
-@media (min-width: 1280px) {
+.hero-figures {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: var(--gutter);
+  justify-content: start;
+}
+
+.figure sup {
+  font-size: 0.45em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ---------- Work grid ----------
+ * Reproduces the live site's staggered wide/narrow rhythm. The card sequence
+ * does not tile evenly (there is a narrow/narrow pair), so this flows rather
+ * than snapping to a fixed 12-column tile -- the resulting gaps are the
+ * intended airiness, not a bug.
+ */
+
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 900px) {
   .work-grid {
-    grid-template-columns: repeat(3, 1fr);
+    flex-flow: row wrap;
+    align-items: flex-start;
+    column-gap: clamp(2rem, 4vw, 4.5rem);
+    row-gap: clamp(3.5rem, 7vw, 7rem);
+  }
+
+  .card--wide {
+    flex: 0 1 clamp(420px, 56%, 60%);
+  }
+
+  .card--narrow {
+    flex: 0 1 clamp(280px, 34%, 38%);
+  }
+
+  /* Vertical offset on every second card produces the staggered baseline. */
+  .card--narrow:nth-of-type(even) {
+    margin-top: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .card--wide:nth-of-type(even) {
+    margin-top: clamp(1.5rem, 3vw, 3rem);
+  }
+}
+
+/* ---------- Project index ---------- */
+
+.index-table {
+  border-top: 1px solid var(--rule);
+}
+
+.index-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 6rem;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-3);
+  width: 100%;
+  padding-block: var(--s-3);
+  border-bottom: 1px solid var(--rule);
+  color: inherit;
+  text-align: left;
+  transition: background var(--dur-fast) ease;
+}
+
+@media (min-width: 800px) {
+  .index-row {
+    grid-template-columns: 3.5rem 1fr 12rem 6rem;
+  }
+}
+
+a.index-row:hover {
+  background: var(--surface);
+  text-decoration: none;
+}
+
+a.index-row:hover .idx-name {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.index-head {
+  border-bottom-color: var(--rule-strong);
+  padding-block: var(--s-2);
+}
+
+.idx-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: var(--fs-h4);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.idx-year {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.idx-no {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 799px) {
+  .idx-cat {
+    display: none;
   }
 }
 
