@@ -1,0 +1,437 @@
+/* layout.css — container, header, sections, page scaffolding
+ *
+ * Every heading and list shares one hard left edge (W10): the .wrap padding.
+ * Body text is never centred.
+ */
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) ease;
+}
+
+.site-header.is-stuck {
+  border-bottom-color: var(--rule);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.wordmark {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.wordmark:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+}
+
+.site-nav a {
+  font-size: var(--fs-small);
+  color: var(--body);
+  padding: 0.75rem 0;          /* >=24px target height (W04) */
+  transition: color var(--dur-fast) ease;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+@media (max-width: 719px) {
+  .site-nav {
+    gap: 1.25rem;
+  }
+
+  .site-nav a.is-secondary {
+    display: none;
+  }
+}
+
+/* The full name plus the nav overflows a 390px viewport. */
+@media (max-width: 619px) {
+  .wordmark-tail {
+    display: none;
+  }
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding-block: var(--s-7);
+  border-top: 1px solid var(--rule);
+}
+
+.section--flush {
+  border-top: 0;
+}
+
+.section--surface {
+  background: var(--surface);
+  border-top: 0;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: var(--s-5);
+}
+
+.section-head h2 {
+  flex: 1 1 22ch;
+}
+
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-bottom: var(--s-3);
+}
+
+.section-label .num {
+  color: var(--ink);
+}
+
+/* ---------- Hero ---------- */
+/* Sized so the Work section's label and heading break the fold (W08). */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(2rem, 5vh, 4rem) clamp(2rem, 5vh, 3.5rem);
+}
+
+.hero h1 {
+  margin-block: var(--s-3) 0;
+  max-width: 15ch;
+}
+
+.hero-lead {
+  margin-top: var(--s-4);
+  max-width: 52ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-4);
+  margin-top: var(--s-4);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--s-3) var(--gutter);
+  /* Deliberately tight: this rule and the top of the figures are cut by the
+     fold on a 900px viewport, so the page cannot read as complete (W08). */
+  margin-top: clamp(1.75rem, 4vh, 3rem);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+
+.figure {
+  font-size: var(--fs-figure);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.figure-label {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Work grid ---------- */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem) var(--gutter);
+}
+
+@media (min-width: 700px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Process ---------- */
+
+.process {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: var(--s-5);
+}
+
+@media (min-width: 900px) {
+  .process {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter);
+  }
+}
+
+.process-step {
+  padding-block: var(--s-4);
+  border-top: 1px solid var(--rule);
+}
+
+.process-step h3 {
+  margin-block: var(--s-2) var(--s-2);
+}
+
+/* ---------- Capabilities ---------- */
+
+.capabilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 700px) {
+  .capabilities {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gutter);
+  }
+}
+
+@media (min-width: 1280px) {
+  .capabilities {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.capability {
+  padding-block: var(--s-4);
+  border-top: 1px solid var(--rule);
+}
+
+.capability h3 {
+  margin-block: var(--s-3) var(--s-2);
+  font-size: var(--fs-h4);
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Sectors ---------- */
+
+.sectors-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6) var(--gutter);
+}
+
+@media (min-width: 1000px) {
+  .sectors-layout {
+    grid-template-columns: 1.4fr 1fr;
+    gap: clamp(3rem, 6vw, 7rem);
+  }
+}
+
+.sector-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-block: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+
+.sector-row:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.sector-row-name {
+  font-size: var(--fs-h4);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.stat-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-4) var(--gutter);
+  align-content: start;
+}
+
+/* ---------- Contact ---------- */
+
+.contact-heading {
+  max-width: 18ch;
+}
+
+.contact-heading a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
+.contact-heading a:hover {
+  color: var(--body);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--s-4) var(--gutter);
+  margin-top: var(--s-6);
+}
+
+.contact-item h3 {
+  font-size: var(--fs-micro);
+  line-height: 1.2;
+  letter-spacing: var(--ls-micro);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--body);
+  margin-bottom: var(--s-2);
+}
+
+.contact-item a,
+.contact-item p {
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: var(--s-4);
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-3);
+}
+
+.site-footer .micro {
+  color: var(--body);
+}
+
+/* ---------- Project page ---------- */
+
+.project-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+
+.project-bar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.project-pager {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.project-hero {
+  padding-block: clamp(3rem, 9vh, 7rem) clamp(2.5rem, 6vh, 4.5rem);
+}
+
+.project-hero h1 {
+  font-size: clamp(2.6rem, 8vw, 7rem);
+  max-width: 16ch;
+  margin-top: var(--s-3);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3) clamp(2rem, 5vw, 5rem);
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+
+.project-meta-item {
+  min-width: 8rem;
+}
+
+.project-meta-item dt {
+  font-size: var(--fs-micro);
+  line-height: 1.2;
+  letter-spacing: var(--ls-micro);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--body);
+}
+
+.project-meta-item dd {
+  margin: 0.5rem 0 0;
+  font-size: var(--fs-h4);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.project-description {
+  margin-top: var(--s-5);
+  max-width: 62ch;
+}
+
+.gallery {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding-bottom: var(--s-7);
+}
+
+.project-next {
+  border-top: 1px solid var(--rule);
+  padding-block: var(--s-6);
+}

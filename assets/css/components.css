@@ -1,0 +1,282 @@
+/* components.css — buttons, cards, filters, lightbox, reveal */
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;                /* W41 touch target */
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease,
+    opacity var(--dur-fast) ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn--primary:hover {
+  background: #333333;
+}
+
+.btn--ghost {
+  color: var(--ink);
+  padding-inline: 0;
+}
+
+.btn--ghost:hover {
+  opacity: 0.6;
+}
+
+.btn--ghost .arrow {
+  transition: transform var(--dur-fast) var(--ease);
+}
+
+.btn--ghost:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Square icon buttons: pager, lightbox controls */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--surface);
+  transition: background var(--dur-fast) ease, opacity var(--dur-fast) ease;
+}
+
+.icon-btn:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+
+.icon-btn[aria-disabled="true"] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ---------- Filter pills ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--s-5);
+}
+
+.pill {
+  min-height: 44px;                /* W41 */
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+.pill:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* Active state is a fill inversion, not a hue change (W07); it is also
+   exposed to assistive tech via aria-pressed. */
+.pill[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.pill .count {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.55;
+  margin-left: 0.4rem;
+}
+
+/* ---------- Project card ---------- */
+
+.card {
+  display: block;
+  color: inherit;
+}
+
+.card:hover {
+  text-decoration: none;
+}
+
+.card-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  aspect-ratio: 4 / 3;
+}
+
+.card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease), opacity var(--dur-fast) ease;
+}
+
+.card:hover .card-frame img {
+  transform: scale(1.03);
+}
+
+.card-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.5rem 0.85rem;
+  background: var(--bg);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro);
+  font-weight: 500;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+}
+
+.card-title {
+  font-size: var(--fs-h4);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.card:hover .card-title {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.card-client {
+  margin-top: 0.35rem;
+}
+
+.card-count {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.work-empty {
+  padding-block: var(--s-5);
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: var(--surface);
+  cursor: zoom-in;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  background: var(--overlay);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox[open],
+.lightbox.is-open {
+  display: grid;
+  grid-template-rows: var(--header-h) 1fr;
+}
+
+.lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-inline: var(--pad);
+  border-bottom: 1px solid var(--rule);
+}
+
+.lightbox-stage {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  min-height: 0;
+}
+
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+/* ---------- Scroll reveal ---------- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Without JS nothing would ever be revealed, so the hidden state only
+   applies once the script has claimed the document. */
+html:not(.js) [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .card-frame img,
+  .card:hover .card-frame img {
+    transform: none;
+  }
+}
