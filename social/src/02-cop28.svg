@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#f3f4ef"/>
+  <image xlink:href="/home/mnm/AI_Lab/Workspace/portfolio2/img/cop28f-01.jpg" x="0" y="135"
+         width="1080" height="608" preserveAspectRatio="xMidYMid slice"/>
+  <text id="title" x="80" y="897" fill="#11120f"
+        font-family="Onest, 'Helvetica Neue', Arial, sans-serif" font-size="82" font-weight="500"
+        letter-spacing="-2.5"><tspan x="80" dy="0">Turning Numbers Into</tspan><tspan x="80" dy="87">Rooms</tspan></text>
+  <line x1="80" y1="1125" x2="176" y2="1125"
+        stroke="#11120f" stroke-width="3"/>
+  <text id="meta" x="80" y="1169" fill="#51534d"
+        font-family="Onest, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="500"
+        letter-spacing="1.6">EXPO DUBAI GROUP · EXHIBITION · 2023</text>
+</svg>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "01-trojena",
+    "approved": false,
+    "posted": false,
+    "channel": "linkedin",
+    "post_type": "project",
+    "archetype": "A",
+    "title": "Carrying the Mountain to the Guest",
+    "meta": "NEOM · PAVILION · 2024",
+    "image_source": "/home/mnm/AI_Lab/Workspace/portfolio2/img/troj2-02.jpg",
+    "image_url": "https://unrealumanga.github.io/portfolio3/social/png/01-trojena.png",
+    "alt": "Fog threshold at the Trojena pavilion entrance, backlit screen detail",
+    "caption": "Carrying the Mountain to the Guest\n\nTrojena is a mountain destination. Most of the people who need to understand it will never stand on that mountain.\n\nSo the pavilion travels to them instead.\n\nFrom the garden it reads as a stack of horizontal blades — closer to a screen than a building, and light enough to look like it could be folded away.\n\nYou enter through a fog threshold — a screen you move through rather than past. It resets attention before a single word of narrative arrives. Inside, a terrain model chamber holds the landscape at a scale you can walk around and read in one look.\n\nThen it demounts and does it again somewhere else.\n\nEvery joint has to come apart, travel, and go back together without losing a millimetre of the finish. The design problem was never the reveal. It was the reveal surviving the third rebuild.\n\nNEOM · Pavilion · 2024\nBuilt with [ FABRICATION / AGENCY PARTNER ]\n\nunrealumanga.github.io/portfolio2\n\n#ExperientialDesign #PavilionDesign #SpatialDesign #NEOM"
+  },
+  {
+    "id": "02-cop28",
+    "approved": false,
+    "posted": false,
+    "channel": "linkedin",
+    "post_type": "project",
+    "archetype": "A",
+    "title": "Turning Numbers Into Rooms",
+    "meta": "EXPO DUBAI GROUP · EXHIBITION · 2023",
+    "image_source": "/home/mnm/AI_Lab/Workspace/portfolio2/img/cop28f-01.jpg",
+    "image_url": "https://unrealumanga.github.io/portfolio3/social/png/02-cop28.png",
+    "alt": "The 4th Room at the COP28 sustainability exhibition, interior view",
+    "caption": "Turning Numbers Into Rooms\n\nEvery sustainability exhibition has the same problem. The subject is enormous, abstract, and mostly made of numbers.\n\nNumbers don't move people through a room.\n\nSo this one is built as a sequence. Welcome. The 4th Room. Biodiversity. Live the City. Each zone hands you one idea, then hands you to the next — the argument accumulates as you walk instead of arriving all at once on a panel.\n\nThe 4th Room carries the weight. [ WHAT THE 4TH ROOM ACTUALLY DID — ONE OR TWO SENTENCES ]\n\nNine visuals from the build, in the gallery.\n\nExpo Dubai Group · Exhibition · 2023\nBuilt with [ FABRICATION / AGENCY PARTNER ]\n\nunrealumanga.github.io/portfolio2\n\n#ExhibitionDesign #Sustainability #SpatialDesign #COP28"
+  },
+  {
+    "id": "03-cyberquest",
+    "approved": false,
+    "posted": false,
+    "channel": "linkedin",
+    "post_type": "project",
+    "archetype": "A",
+    "title": "Turning Cybersecurity Into Spectacle",
+    "meta": "DARKMATTER X SIA · EXHIBITION · 2018",
+    "image_source": "/home/mnm/AI_Lab/Workspace/portfolio2/img/cq-kv.jpg",
+    "image_url": "https://unrealumanga.github.io/portfolio3/social/png/03-cyberquest.png",
+    "alt": "Laser-tunnel entrance at CyberQuest, lit corridor of blue beams",
+    "caption": "Turning Cybersecurity Into Spectacle\n\nCybersecurity is invisible. That is the entire brief, and the entire problem.\n\nCyberQuest answered it with light.\n\nA laser tunnel at the entrance, so the first thing you pass through is the thing itself — a network you can finally see. Then Digital Fortress: a hexagon lighting installation that reads as architecture until it starts behaving like data. The arena seats a full house under a rig built to carry the show, not merely light it.\n\n2018. Eight years on, the lighting logic has aged better than most of the software it was built to talk about.\n\nDarkmatter x SIA · Exhibition · 2018\nBuilt with [ FABRICATION / AGENCY PARTNER ]\n\nunrealumanga.github.io/portfolio2\n\n#ExhibitionDesign #LightingDesign #EventDesign"
+  },
+  {
+    "id": "04-pipeline",
+    "approved": false,
+    "posted": false,
+    "channel": "linkedin",
+    "post_type": "pipeline",
+    "archetype": "B",
+    "title": "Directing Scenes Instead of Software",
+    "meta": "AI-AUGMENTED PRACTICE · 01",
+    "image_source": null,
+    "image_url": "https://unrealumanga.github.io/portfolio3/social/png/04-pipeline.png",
+    "alt": "Statement card reading: Directing Scenes Instead of Software",
+    "caption": "Directing Scenes Instead of Software\n\nI don't just use AI tools. I build them.\n\nOutside project hours I run a working lab: AI agents wired directly into the 3D software I design in. Houdini and Karma. Blender. USD, MaterialX, and self-hosted language and vision models. All of it in-house, all of it on my own hardware.\n\nMore options explored per deadline. Faster client iterations. Visualisation in hours instead of days.\n\nThe part that matters most to me is smaller than that. I can direct a scene conversationally — lighting, materials, layout — and stay on the design decision instead of the software. The tool stops being the bottleneck.\n\nClient work never leaves my machines. That was a requirement, not a feature.\n\nNext in this series: reference image in, built scene out.\n\n#AIinDesign #Houdini #3DVisualisation #DesignTechnology"
+  }
+]

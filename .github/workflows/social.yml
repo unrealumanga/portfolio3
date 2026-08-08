@@ -1,0 +1,41 @@
+name: social-queue
+
+# Publishes one approved post per week into social/feed.xml.
+# IFTTT polls that feed and posts it to LinkedIn.
+#
+# Nothing is published unless the queue item has approved: true AND its caption
+# contains no unfilled [ ] blanks. Run it by hand any time via "Run workflow".
+
+on:
+  schedule:
+    # 06:00 UTC Tuesday = 10:00 Dubai. Weekly, matching the 1-post-a-week cadence.
+    - cron: "0 6 * * TUE"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-queue
+  cancel-in-progress: false
+
+jobs:
+  publish-next:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish next approved item
+        run: python3 .github/scripts/pop_queue.py
+
+      - name: Commit the updated feed and queue
+        run: |
+          if git diff --quiet -- social/; then
+            echo "No change — nothing was due."
+            exit 0
+          fi
+          git config user.name  "queue-bot"
+          git config user.email "queue-bot@users.noreply.github.com"
+          git add social/feed.xml social/queue.json
+          git commit -m "social: publish next approved item"
+          git push
