@@ -21,8 +21,8 @@
   {
    "key": "cop28",
    "span": "narrow",
-   "title": "COP28 Sustainability Exhibition",
-   "client": "Expo Dubai Group",
+   "title": "Shaping the City of the Future",
+   "client": "Expo City Dubai",
    "type": "Exhibition",
    "year": "2023",
    "kv": "img/cop28f-kv.jpg"
@@ -201,8 +201,8 @@
   {
    "key": "humain",
    "span": "wide",
-   "title": "Humain @ LEAP 2026",
-   "client": "Humain",
+   "title": "Building a Home for Intelligence",
+   "client": "HUMAIN",
    "type": "Exhibition",
    "year": "2026",
    "kv": "sources/humain/00.jpg"
@@ -342,8 +342,8 @@
   },
   {
    "no": "14",
-   "title": "COP28 Sustainability Exhibition",
-   "client": "Expo Dubai Group",
+   "title": "Shaping the City of the Future",
+   "client": "Expo City Dubai",
    "type": "Exhibition",
    "year": "2023",
    "key": "cop28"
@@ -374,8 +374,8 @@
   },
   {
    "no": "18",
-   "title": "Humain @ LEAP 2026",
-   "client": "Humain",
+   "title": "Building a Home for Intelligence",
+   "client": "HUMAIN",
    "type": "Exhibition",
    "year": "2026",
    "key": "humain"
@@ -478,8 +478,8 @@
   },
   {
    "no": "31",
-   "title": "Global Rail 2024",
-   "client": "RTA",
+   "title": "Advancing Sustainable Transport",
+   "client": "Roads & Transport Authority",
    "type": "Exhibition",
    "year": "2024",
    "key": "global-rail-2024"
@@ -593,7 +593,7 @@
    ]
   },
   "cop28": {
-   "name": "COP28 Sustainability Exhibition",
+   "name": "Shaping the City of the Future",
    "images": [
     {
      "src": "img/cop28f-kv.jpg",
@@ -1253,35 +1253,35 @@
    ]
   },
   "humain": {
-   "name": "Humain @ LEAP 2026",
+   "name": "Building a Home for Intelligence",
    "images": [
     {
      "src": "sources/humain/00.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/01.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/02.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/03.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/04.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/05.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     },
     {
      "src": "sources/humain/06.jpg",
-     "cap": "Humain @ LEAP 2026"
+     "cap": "Building a Home for Intelligence"
     }
    ]
   },
@@ -1394,11 +1394,11 @@
    ]
   },
   "global-rail-2024": {
-   "name": "Global Rail 2024",
+   "name": "Advancing Sustainable Transport",
    "images": [
     {
      "src": "img/fw-16.jpg",
-     "cap": "RTA"
+     "cap": "Roads & Transport Authority"
     }
    ]
   },
