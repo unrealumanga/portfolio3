@@ -31,7 +31,7 @@ index_html = (ROOT / "index.html").read_text()
 featured, rows, galleries = site["featured"], site["index"], site["galleries"]
 
 # --- Shape matches the live site ---
-ADDED = {"dxb-terminal-c", "qiddiya-3-events"}  # new projects
+ADDED = {"dxb-terminal-c", "qiddiya-3-events"}  # new projects (featured: appended at end)
 REPLACED = {"marina", "humain"}  # galleries swapped for new selections
 NEW = len(ADDED)  # projects added after the live-site extract (scripts/add_project.py)
 check(len(featured) == 24 + NEW, f"expected {24 + NEW} featured cards, got {len(featured)}")

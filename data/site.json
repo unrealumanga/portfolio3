@@ -1,24 +1,6 @@
 {
  "featured": [
   {
-   "key": "dxb-terminal-c",
-   "span": "wide",
-   "title": "Dubai Airports Terminal C",
-   "client": "Dubai Airports",
-   "type": "Exhibition",
-   "year": "2026",
-   "kv": "sources/dxb-terminal-c/00.jpg"
-  },
-  {
-   "key": "qiddiya-3-events",
-   "span": "narrow",
-   "title": "Qiddiya — Three Events",
-   "client": "Qiddiya",
-   "type": "Exhibition",
-   "year": "2026",
-   "kv": "sources/qiddiya-3-events/00.jpg"
-  },
-  {
    "key": "trojena",
    "span": "wide",
    "title": "Trojena Mobile Pavilion",
@@ -233,6 +215,24 @@
    "type": "Exhibition",
    "year": "2025",
    "kv": "img/cover-qiddiya-cityscape.jpg"
+  },
+  {
+   "key": "dxb-terminal-c",
+   "span": "wide",
+   "title": "Dubai Airports Terminal C",
+   "client": "Dubai Airports",
+   "type": "Exhibition",
+   "year": "2026",
+   "kv": "sources/dxb-terminal-c/00.jpg"
+  },
+  {
+   "key": "qiddiya-3-events",
+   "span": "narrow",
+   "title": "Qiddiya — Three Events",
+   "client": "Qiddiya",
+   "type": "Exhibition",
+   "year": "2026",
+   "kv": "sources/qiddiya-3-events/00.jpg"
   }
  ],
  "index": [
