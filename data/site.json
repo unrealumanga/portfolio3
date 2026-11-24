@@ -228,7 +228,7 @@
   {
    "key": "qiddiya-3-events",
    "span": "narrow",
-   "title": "Qiddiya — Three Events",
+   "title": "Qiddiya Property Shows",
    "client": "Qiddiya",
    "type": "Exhibition",
    "year": "2026",
@@ -446,7 +446,7 @@
   },
   {
    "no": "27",
-   "title": "Qiddiya — Three Events",
+   "title": "Qiddiya Property Shows",
    "client": "Qiddiya",
    "type": "Exhibition",
    "year": "2026",
@@ -1468,35 +1468,35 @@
    ]
   },
   "qiddiya-3-events": {
-   "name": "Qiddiya — Three Events",
+   "name": "Qiddiya Property Shows",
    "images": [
     {
      "src": "sources/qiddiya-3-events/00.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/01.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/02.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/03.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/04.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/05.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     },
     {
      "src": "sources/qiddiya-3-events/06.jpg",
-     "cap": "Qiddiya — Three Events"
+     "cap": "Qiddiya Property Shows"
     }
    ]
   }
