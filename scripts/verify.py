@@ -31,12 +31,14 @@ index_html = (ROOT / "index.html").read_text()
 featured, rows, galleries = site["featured"], site["index"], site["galleries"]
 
 # --- Shape matches the live site ---
-NEW = 4  # projects added after the live-site extract (scripts/add_project.py)
+ADDED = {"dxb-terminal-c", "qiddiya-3-events"}  # new projects
+REPLACED = {"marina", "humain"}  # galleries swapped for new selections
+NEW = len(ADDED)  # projects added after the live-site extract (scripts/add_project.py)
 check(len(featured) == 24 + NEW, f"expected {24 + NEW} featured cards, got {len(featured)}")
 check(len(rows) == 36 + NEW, f"expected 36 index rows, got {len(rows)}")
 check(len(galleries) == 36 + NEW, f"expected 36 galleries, got {len(galleries)}")
 check(
-    sum(len(g["images"]) for k, g in galleries.items() if not g["images"][0]["src"].startswith("sources/")) == 170,
+    sum(len(g["images"]) for k, g in galleries.items() if k not in ADDED | REPLACED) == 170 - 8,  # live total minus marina (4) and humain (4), which were replaced
     "expected 170 gallery images in total",
 )
 check(len(site["sectors"]) == 5, "expected 5 sectors")
@@ -54,13 +56,13 @@ grid = source[
 ]
 src_order = [k for k in re.findall(r"openLightbox\('([^']+)'\)", grid) if k in galleries]  # live site may be ahead of portfolio3
 src_spans = [sp for sp, k in zip(re.findall(r'<button class="card (\w+)"', grid), re.findall(r"openLightbox\('([^']+)'\)", grid)) if k in galleries]
-check([c["key"] for c in featured if not c["kv"].startswith("sources/")] == src_order, "featured order differs from source")
-check([c["span"] for c in featured if not c["kv"].startswith("sources/")] == src_spans, "wide/narrow rhythm differs")
+check([c["key"] for c in featured if c["key"] not in ADDED] == src_order, "featured order differs from source")
+check([c["span"] for c in featured if c["key"] not in ADDED] == src_spans, "wide/narrow rhythm differs")
 
 # --- Index order matches the source ---
 index_block = source[source.find('id="index"') : source.find("</section>", source.find('id="index"'))]
 src_index = [k for k in re.findall(r'<button class="index-row" onclick="openLightbox\(\'([^\']+)\'\)"', index_block) if k in galleries]
-check([r["key"] for r in rows if not galleries[r["key"]]["images"][0]["src"].startswith("sources/")] == src_index, "index order differs from source")
+check([r["key"] for r in rows if r["key"] not in ADDED] == src_index, "index order differs from source")
 
 # --- Index page ---
 check("{{" not in index_html, "unsubstituted token in index.html")

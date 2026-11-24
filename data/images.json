@@ -503,18 +503,6 @@
    "w": 640
   }
  },
- "img/cover-humain-leap.jpg": {
-  "1600": {
-   "h": 613,
-   "src": "assets/img/cover-humain-leap-9a1738-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/cover-humain-leap-9a1738-640.webp",
-   "w": 640
-  }
- },
  "img/cover-jetex-aero.jpg": {
   "1600": {
    "h": 614,
@@ -560,18 +548,6 @@
   "640": {
    "h": 357,
    "src": "assets/img/cover-tadawul-cmf-df6cec-640.webp",
-   "w": 640
-  }
- },
- "img/cover-wicked-marina.jpg": {
-  "1600": {
-   "h": 619,
-   "src": "assets/img/cover-wicked-marina-f8f4e6-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 360,
-   "src": "assets/img/cover-wicked-marina-f8f4e6-640.webp",
    "w": 640
   }
  },
@@ -1607,42 +1583,6 @@
    "w": 640
   }
  },
- "img/strip-humain-0.jpg": {
-  "1600": {
-   "h": 432,
-   "src": "assets/img/strip-humain-0-c11dec-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 395,
-   "src": "assets/img/strip-humain-0-c11dec-640.webp",
-   "w": 640
-  }
- },
- "img/strip-humain-1.jpg": {
-  "1600": {
-   "h": 390,
-   "src": "assets/img/strip-humain-1-570efb-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/strip-humain-1-570efb-640.webp",
-   "w": 640
-  }
- },
- "img/strip-humain-2.jpg": {
-  "1600": {
-   "h": 390,
-   "src": "assets/img/strip-humain-2-61fc71-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/strip-humain-2-61fc71-640.webp",
-   "w": 640
-  }
- },
  "img/strip-lana-0.jpg": {
   "1600": {
    "h": 394,
@@ -1676,42 +1616,6 @@
   "640": {
    "h": 360,
    "src": "assets/img/strip-lana-2-6f8416-640.webp",
-   "w": 640
-  }
- },
- "img/strip-marina-0.jpg": {
-  "1600": {
-   "h": 394,
-   "src": "assets/img/strip-marina-0-2d6096-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 360,
-   "src": "assets/img/strip-marina-0-2d6096-640.webp",
-   "w": 640
-  }
- },
- "img/strip-marina-1.jpg": {
-  "1600": {
-   "h": 394,
-   "src": "assets/img/strip-marina-1-b056c6-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 360,
-   "src": "assets/img/strip-marina-1-b056c6-640.webp",
-   "w": 640
-  }
- },
- "img/strip-marina-2.jpg": {
-  "1600": {
-   "h": 394,
-   "src": "assets/img/strip-marina-2-f776e9-1600.webp",
-   "w": 700
-  },
-  "640": {
-   "h": 360,
-   "src": "assets/img/strip-marina-2-f776e9-640.webp",
    "w": 640
   }
  },
@@ -2123,207 +2027,207 @@
    "w": 640
   }
  },
- "sources/humain-ghe-2026/00.jpg": {
+ "sources/humain/00.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/00-089daa-1600.webp",
+   "src": "assets/img/00-531f7c-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/00-089daa-640.webp",
+   "src": "assets/img/00-531f7c-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/01.jpg": {
+ "sources/humain/01.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/01-f788db-1600.webp",
+   "src": "assets/img/01-1ced5f-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/01-f788db-640.webp",
+   "src": "assets/img/01-1ced5f-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/02.jpg": {
+ "sources/humain/02.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/02-dfea21-1600.webp",
+   "src": "assets/img/02-4063a0-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/02-dfea21-640.webp",
+   "src": "assets/img/02-4063a0-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/03.jpg": {
+ "sources/humain/03.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/03-8babdd-1600.webp",
+   "src": "assets/img/03-d7b8ea-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/03-8babdd-640.webp",
+   "src": "assets/img/03-d7b8ea-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/04.jpg": {
+ "sources/humain/04.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/04-d4c4c1-1600.webp",
+   "src": "assets/img/04-160247-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/04-d4c4c1-640.webp",
+   "src": "assets/img/04-160247-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/05.jpg": {
+ "sources/humain/05.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/05-c9892d-1600.webp",
+   "src": "assets/img/05-7e8b68-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/05-c9892d-640.webp",
+   "src": "assets/img/05-7e8b68-640.webp",
    "w": 640
   }
  },
- "sources/humain-ghe-2026/06.jpg": {
+ "sources/humain/06.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/06-839d92-1600.webp",
+   "src": "assets/img/06-fd69d7-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/06-839d92-640.webp",
+   "src": "assets/img/06-fd69d7-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/00.jpg": {
+ "sources/marina/00.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/00-b402c5-1600.webp",
+   "src": "assets/img/00-ed6dd5-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/00-b402c5-640.webp",
+   "src": "assets/img/00-ed6dd5-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/01.jpg": {
+ "sources/marina/01.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/01-5f1e4a-1600.webp",
+   "src": "assets/img/01-863b3b-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/01-5f1e4a-640.webp",
+   "src": "assets/img/01-863b3b-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/02.jpg": {
+ "sources/marina/02.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/02-96ef5f-1600.webp",
+   "src": "assets/img/02-25150d-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/02-96ef5f-640.webp",
+   "src": "assets/img/02-25150d-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/03.jpg": {
+ "sources/marina/03.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/03-8fb622-1600.webp",
+   "src": "assets/img/03-3db9d7-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/03-8fb622-640.webp",
+   "src": "assets/img/03-3db9d7-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/04.jpg": {
+ "sources/marina/04.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/04-6511d1-1600.webp",
+   "src": "assets/img/04-d2ec49-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/04-6511d1-640.webp",
+   "src": "assets/img/04-d2ec49-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/05.jpg": {
+ "sources/marina/05.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/05-e301ad-1600.webp",
+   "src": "assets/img/05-0c3df3-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/05-e301ad-640.webp",
+   "src": "assets/img/05-0c3df3-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/06.jpg": {
+ "sources/marina/06.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/06-def0e0-1600.webp",
+   "src": "assets/img/06-35ef7c-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/06-def0e0-640.webp",
+   "src": "assets/img/06-35ef7c-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/07.jpg": {
+ "sources/marina/07.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/07-fef067-1600.webp",
+   "src": "assets/img/07-573731-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/07-fef067-640.webp",
+   "src": "assets/img/07-573731-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/08.jpg": {
+ "sources/marina/08.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/08-607964-1600.webp",
+   "src": "assets/img/08-a97b16-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/08-607964-640.webp",
+   "src": "assets/img/08-a97b16-640.webp",
    "w": 640
   }
  },
- "sources/marina-gate-av/09.jpg": {
+ "sources/marina/09.jpg": {
   "1600": {
    "h": 893,
-   "src": "assets/img/09-4be1b5-1600.webp",
+   "src": "assets/img/09-e8fc53-1600.webp",
    "w": 1600
   },
   "640": {
    "h": 357,
-   "src": "assets/img/09-4be1b5-640.webp",
+   "src": "assets/img/09-e8fc53-640.webp",
    "w": 640
   }
  },

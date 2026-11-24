@@ -10,24 +10,6 @@
    "kv": "sources/dxb-terminal-c/00.jpg"
   },
   {
-   "key": "humain-ghe-2026",
-   "span": "narrow",
-   "title": "Humain GHE 2026",
-   "client": "Humain",
-   "type": "Exhibition",
-   "year": "2026",
-   "kv": "sources/humain-ghe-2026/00.jpg"
-  },
-  {
-   "key": "marina-gate-av",
-   "span": "wide",
-   "title": "Marina Gate Experience Center",
-   "client": "DAMAC",
-   "type": "Brand Space",
-   "year": "2024",
-   "kv": "sources/marina-gate-av/00.jpg"
-  },
-  {
    "key": "qiddiya-3-events",
    "span": "narrow",
    "title": "Qiddiya — Three Events",
@@ -232,7 +214,7 @@
    "client": "DAMAC",
    "type": "Brand Space",
    "year": "2024",
-   "kv": "img/cover-wicked-marina.jpg"
+   "kv": "sources/marina/00.jpg"
   },
   {
    "key": "humain",
@@ -241,7 +223,7 @@
    "client": "Humain",
    "type": "Exhibition",
    "year": "2026",
-   "kv": "img/cover-humain-leap.jpg"
+   "kv": "sources/humain/00.jpg"
   },
   {
    "key": "qiddiya",
@@ -296,14 +278,6 @@
   },
   {
    "no": "06",
-   "title": "Marina Gate Experience Center",
-   "client": "DAMAC",
-   "type": "Brand Space",
-   "year": "2024",
-   "key": "marina-gate-av"
-  },
-  {
-   "no": "07",
    "title": "CyberQuest",
    "client": "Darkmatter x SIA",
    "type": "Exhibition",
@@ -311,7 +285,7 @@
    "key": "cyberquest"
   },
   {
-   "no": "08",
+   "no": "07",
    "title": "IREIS Cityscape RAK",
    "client": "Deyaar",
    "type": "Exhibition",
@@ -319,7 +293,7 @@
    "key": "ireis-cityscape-rak"
   },
   {
-   "no": "09",
+   "no": "08",
    "title": "Dubai Careers — RUYA 2026",
    "client": "DHA",
    "type": "Exhibition",
@@ -327,7 +301,7 @@
    "key": "dubai-careers-ruya-2026"
   },
   {
-   "no": "10",
+   "no": "09",
    "title": "DP World — Ru'ya Careers",
    "client": "DP World",
    "type": "Exhibition",
@@ -335,7 +309,7 @@
    "key": "dp-world-ru-ya-careers"
   },
   {
-   "no": "11",
+   "no": "10",
    "title": "Dubai Airports Terminal C",
    "client": "Dubai Airports",
    "type": "Exhibition",
@@ -343,7 +317,7 @@
    "key": "dxb-terminal-c"
   },
   {
-   "no": "12",
+   "no": "11",
    "title": "EDGE — Dubai Airshow 2021",
    "client": "EDGE Group",
    "type": "Exhibition",
@@ -351,7 +325,7 @@
    "key": "edge"
   },
   {
-   "no": "13",
+   "no": "12",
    "title": "Afghanistan Pavilion",
    "client": "Expo 2020 Dubai",
    "type": "Pavilion",
@@ -359,7 +333,7 @@
    "key": "afghanistan"
   },
   {
-   "no": "14",
+   "no": "13",
    "title": "RISE 2026",
    "client": "Expo City Dubai",
    "type": "Exhibition",
@@ -367,7 +341,7 @@
    "key": "rise-2026"
   },
   {
-   "no": "15",
+   "no": "14",
    "title": "COP28 Sustainability Exhibition",
    "client": "Expo Dubai Group",
    "type": "Exhibition",
@@ -375,7 +349,7 @@
    "key": "cop28"
   },
   {
-   "no": "16",
+   "no": "15",
    "title": "Expo Office Extension",
    "client": "Expo Dubai Group",
    "type": "Corporate",
@@ -383,7 +357,7 @@
    "key": "expo-office"
   },
   {
-   "no": "17",
+   "no": "16",
    "title": "Stories of the Nation",
    "client": "Expo Dubai Group",
    "type": "Pavilion",
@@ -391,7 +365,7 @@
    "key": "stories"
   },
   {
-   "no": "18",
+   "no": "17",
    "title": "GROVA x Tilal 2026",
    "client": "Grova Tilal",
    "type": "Exhibition",
@@ -399,7 +373,7 @@
    "key": "grova"
   },
   {
-   "no": "19",
+   "no": "18",
    "title": "Humain @ LEAP 2026",
    "client": "Humain",
    "type": "Exhibition",
@@ -407,7 +381,7 @@
    "key": "humain"
   },
   {
-   "no": "20",
+   "no": "19",
    "title": "Humain Experience Center — KSA Executive Office",
    "client": "HUMAIN",
    "type": "Brand Space",
@@ -415,15 +389,7 @@
    "key": "humain-exec"
   },
   {
-   "no": "21",
-   "title": "Humain GHE 2026",
-   "client": "Humain",
-   "type": "Exhibition",
-   "year": "2026",
-   "key": "humain-ghe-2026"
-  },
-  {
-   "no": "22",
+   "no": "20",
    "title": "JAVA Showroom",
    "client": "JAVA",
    "type": "Brand Space",
@@ -431,7 +397,7 @@
    "key": "java"
   },
   {
-   "no": "23",
+   "no": "21",
    "title": "JETEX AERO 2026",
    "client": "JETEX",
    "type": "Exhibition",
@@ -439,7 +405,7 @@
    "key": "jetex"
   },
   {
-   "no": "24",
+   "no": "22",
    "title": "Experience Center Riyadh",
    "client": "Kolaghassi",
    "type": "Exhibition",
@@ -447,7 +413,7 @@
    "key": "experience-center-riyadh"
   },
   {
-   "no": "25",
+   "no": "23",
    "title": "Trojena Mobile Pavilion",
    "client": "NEOM",
    "type": "Pavilion",
@@ -455,7 +421,7 @@
    "key": "trojena"
   },
   {
-   "no": "26",
+   "no": "24",
    "title": "Lana Experience Centre",
    "client": "Omniyat",
    "type": "Brand Space",
@@ -463,7 +429,7 @@
    "key": "lana"
   },
   {
-   "no": "27",
+   "no": "25",
    "title": "ICE Exhibition Programme",
    "client": "PIF",
    "type": "Exhibition",
@@ -471,7 +437,7 @@
    "key": "ice"
   },
   {
-   "no": "28",
+   "no": "26",
    "title": "Qiddiya Cityscape 2025",
    "client": "Qiddiya",
    "type": "Exhibition",
@@ -479,7 +445,7 @@
    "key": "qiddiya"
   },
   {
-   "no": "29",
+   "no": "27",
    "title": "Qiddiya — Three Events",
    "client": "Qiddiya",
    "type": "Exhibition",
@@ -487,7 +453,7 @@
    "key": "qiddiya-3-events"
   },
   {
-   "no": "30",
+   "no": "28",
    "title": "World Defense Show 2026",
    "client": "Qudra",
    "type": "Exhibition",
@@ -495,7 +461,7 @@
    "key": "world-defense-show-2026"
   },
   {
-   "no": "31",
+   "no": "29",
    "title": "Rafal Cityscape Global 2026",
    "client": "Rafal",
    "type": "Exhibition",
@@ -503,7 +469,7 @@
    "key": "rafal"
   },
   {
-   "no": "32",
+   "no": "30",
    "title": "GITEX GLOBAL 2025",
    "client": "RTA",
    "type": "Exhibition",
@@ -511,7 +477,7 @@
    "key": "gitex-global-2025"
   },
   {
-   "no": "33",
+   "no": "31",
    "title": "Global Rail 2024",
    "client": "RTA",
    "type": "Exhibition",
@@ -519,7 +485,7 @@
    "key": "global-rail-2024"
   },
   {
-   "no": "34",
+   "no": "32",
    "title": "Saudi Capital Market Forum 2026",
    "client": "Saudi Tadawul Group",
    "type": "Conference",
@@ -527,7 +493,7 @@
    "key": "saudi-cmf"
   },
   {
-   "no": "35",
+   "no": "33",
    "title": "Tadawul Tower Marketplace",
    "client": "Saudi Tadawul Group",
    "type": "Exhibition",
@@ -535,7 +501,7 @@
    "key": "tadawul-tower"
   },
   {
-   "no": "36",
+   "no": "34",
    "title": "World Cup Bid Model",
    "client": "Saudi World Cup Bid",
    "type": "Exhibition",
@@ -543,7 +509,7 @@
    "key": "world-cup-bid-model"
   },
   {
-   "no": "37",
+   "no": "35",
    "title": "Sobha Hartland — Cityscape Global",
    "client": "Sobha Realty",
    "type": "Exhibition",
@@ -551,7 +517,7 @@
    "key": "sobha-hartland-cityscape-global"
   },
   {
-   "no": "38",
+   "no": "36",
    "title": "stc — GITEX 2021",
    "client": "stc",
    "type": "Exhibition",
@@ -559,7 +525,7 @@
    "key": "stc-gitex-2021"
   },
   {
-   "no": "39",
+   "no": "37",
    "title": "Tetra Pak — Gulfood Manufacturing",
    "client": "Tetra Pak",
    "type": "Exhibition",
@@ -567,7 +533,7 @@
    "key": "tetra-pak-gulfood-manufacturing"
   },
   {
-   "no": "40",
+   "no": "38",
    "title": "Yas Holding Abu Dhabi HQ",
    "client": "Yas Holding",
    "type": "Corporate",
@@ -1290,19 +1256,31 @@
    "name": "Humain @ LEAP 2026",
    "images": [
     {
-     "src": "img/cover-humain-leap.jpg",
+     "src": "sources/humain/00.jpg",
      "cap": "Humain @ LEAP 2026"
     },
     {
-     "src": "img/strip-humain-0.jpg",
+     "src": "sources/humain/01.jpg",
      "cap": "Humain @ LEAP 2026"
     },
     {
-     "src": "img/strip-humain-1.jpg",
+     "src": "sources/humain/02.jpg",
      "cap": "Humain @ LEAP 2026"
     },
     {
-     "src": "img/strip-humain-2.jpg",
+     "src": "sources/humain/03.jpg",
+     "cap": "Humain @ LEAP 2026"
+    },
+    {
+     "src": "sources/humain/04.jpg",
+     "cap": "Humain @ LEAP 2026"
+    },
+    {
+     "src": "sources/humain/05.jpg",
+     "cap": "Humain @ LEAP 2026"
+    },
+    {
+     "src": "sources/humain/06.jpg",
      "cap": "Humain @ LEAP 2026"
     }
    ]
@@ -1311,19 +1289,43 @@
    "name": "Marina Gate Experience Centre",
    "images": [
     {
-     "src": "img/cover-wicked-marina.jpg",
+     "src": "sources/marina/00.jpg",
      "cap": "Marina Gate Experience Centre"
     },
     {
-     "src": "img/strip-marina-0.jpg",
+     "src": "sources/marina/01.jpg",
      "cap": "Marina Gate Experience Centre"
     },
     {
-     "src": "img/strip-marina-1.jpg",
+     "src": "sources/marina/02.jpg",
      "cap": "Marina Gate Experience Centre"
     },
     {
-     "src": "img/strip-marina-2.jpg",
+     "src": "sources/marina/03.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/04.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/05.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/06.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/07.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/08.jpg",
+     "cap": "Marina Gate Experience Centre"
+    },
+    {
+     "src": "sources/marina/09.jpg",
      "cap": "Marina Gate Experience Centre"
     }
    ]
@@ -1465,84 +1467,6 @@
     }
    ]
   },
-  "humain-ghe-2026": {
-   "name": "Humain GHE 2026",
-   "images": [
-    {
-     "src": "sources/humain-ghe-2026/00.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/01.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/02.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/03.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/04.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/05.jpg",
-     "cap": "Humain GHE 2026"
-    },
-    {
-     "src": "sources/humain-ghe-2026/06.jpg",
-     "cap": "Humain GHE 2026"
-    }
-   ]
-  },
-  "marina-gate-av": {
-   "name": "Marina Gate Experience Center",
-   "images": [
-    {
-     "src": "sources/marina-gate-av/00.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/01.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/02.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/03.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/04.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/05.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/06.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/07.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/08.jpg",
-     "cap": "Marina Gate Experience Center"
-    },
-    {
-     "src": "sources/marina-gate-av/09.jpg",
-     "cap": "Marina Gate Experience Center"
-    }
-   ]
-  },
   "qiddiya-3-events": {
    "name": "Qiddiya — Three Events",
    "images": [
@@ -1580,11 +1504,11 @@
  "sectors": [
   {
    "name": "Exhibitions",
-   "count": "28 projects"
+   "count": "27 projects"
   },
   {
    "name": "Brand Spaces",
-   "count": "06 projects"
+   "count": "05 projects"
   },
   {
    "name": "Pavilions",
