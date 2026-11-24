@@ -3,7 +3,7 @@
 
 The deployed site at unrealumanga.github.io/portfolio/ is a single
 self-contained index.html with its data inlined. That file -- byte-identical to
-/home/mnm/AI_Lab/Workspace/portfolio/index.html -- is the authority for project
+/workspace/portfolio/index.html -- is the authority for project
 naming, ordering, grouping and gallery contents.
 
 Read-only: this never writes to the source tree.
@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = Path("/home/mnm/AI_Lab/Workspace/portfolio/index.html")
+SOURCE = Path("/workspace/portfolio/index.html")
 
 
 def text(fragment):

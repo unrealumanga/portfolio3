@@ -1,6 +1,42 @@
 {
  "featured": [
   {
+   "key": "dxb-terminal-c",
+   "span": "wide",
+   "title": "Dubai Airports Terminal C",
+   "client": "Dubai Airports",
+   "type": "Exhibition",
+   "year": "2026",
+   "kv": "sources/dxb-terminal-c/00.jpg"
+  },
+  {
+   "key": "humain-ghe-2026",
+   "span": "narrow",
+   "title": "Humain GHE 2026",
+   "client": "Humain",
+   "type": "Exhibition",
+   "year": "2026",
+   "kv": "sources/humain-ghe-2026/00.jpg"
+  },
+  {
+   "key": "marina-gate-av",
+   "span": "wide",
+   "title": "Marina Gate Experience Center",
+   "client": "DAMAC",
+   "type": "Brand Space",
+   "year": "2024",
+   "kv": "sources/marina-gate-av/00.jpg"
+  },
+  {
+   "key": "qiddiya-3-events",
+   "span": "narrow",
+   "title": "Qiddiya — Three Events",
+   "client": "Qiddiya",
+   "type": "Exhibition",
+   "year": "2026",
+   "kv": "sources/qiddiya-3-events/00.jpg"
+  },
+  {
    "key": "trojena",
    "span": "wide",
    "title": "Trojena Mobile Pavilion",
@@ -57,7 +93,7 @@
   {
    "key": "aldar",
    "span": "narrow",
-   "title": "Al Dar x Nikki Beach \u2014 RAK Sales Center",
+   "title": "Al Dar x Nikki Beach — RAK Sales Center",
    "client": "Aldar",
    "type": "Brand Space",
    "year": "2024",
@@ -66,7 +102,7 @@
   {
    "key": "humain-exec",
    "span": "narrow",
-   "title": "Humain Experience Center \u2014 KSA Executive Office",
+   "title": "Humain Experience Center — KSA Executive Office",
    "client": "HUMAIN",
    "type": "Brand Space",
    "year": "2026",
@@ -129,7 +165,7 @@
   {
    "key": "adda",
    "span": "wide",
-   "title": "ADDA \u2014 GITEX 2019",
+   "title": "ADDA — GITEX 2019",
    "client": "Abu Dhabi Digital Authority",
    "type": "Exhibition",
    "year": "2019",
@@ -138,7 +174,7 @@
   {
    "key": "edge",
    "span": "narrow",
-   "title": "EDGE \u2014 Dubai Airshow 2021",
+   "title": "EDGE — Dubai Airshow 2021",
    "client": "EDGE Group",
    "type": "Exhibition",
    "year": "2021",
@@ -147,7 +183,7 @@
   {
    "key": "beeah",
    "span": "wide",
-   "title": "BEEAH GROUP \u2014 Acres 2026",
+   "title": "BEEAH GROUP — Acres 2026",
    "client": "Beeah Group",
    "type": "Exhibition",
    "year": "2026",
@@ -220,7 +256,7 @@
  "index": [
   {
    "no": "01",
-   "title": "ADDA \u2014 GITEX 2019",
+   "title": "ADDA — GITEX 2019",
    "client": "Abu Dhabi Digital Authority",
    "type": "Exhibition",
    "year": "2019",
@@ -228,7 +264,7 @@
   },
   {
    "no": "02",
-   "title": "Al Dar x Nikki Beach \u2014 RAK Sales Center",
+   "title": "Al Dar x Nikki Beach — RAK Sales Center",
    "client": "Aldar",
    "type": "Brand Space",
    "year": "2024",
@@ -236,7 +272,7 @@
   },
   {
    "no": "03",
-   "title": "BEEAH GROUP \u2014 Acres 2026",
+   "title": "BEEAH GROUP — Acres 2026",
    "client": "Beeah Group",
    "type": "Exhibition",
    "year": "2026",
@@ -260,6 +296,14 @@
   },
   {
    "no": "06",
+   "title": "Marina Gate Experience Center",
+   "client": "DAMAC",
+   "type": "Brand Space",
+   "year": "2024",
+   "key": "marina-gate-av"
+  },
+  {
+   "no": "07",
    "title": "CyberQuest",
    "client": "Darkmatter x SIA",
    "type": "Exhibition",
@@ -267,7 +311,7 @@
    "key": "cyberquest"
   },
   {
-   "no": "07",
+   "no": "08",
    "title": "IREIS Cityscape RAK",
    "client": "Deyaar",
    "type": "Exhibition",
@@ -275,31 +319,39 @@
    "key": "ireis-cityscape-rak"
   },
   {
-   "no": "08",
-   "title": "Dubai Careers \u2014 RUYA 2026",
+   "no": "09",
+   "title": "Dubai Careers — RUYA 2026",
    "client": "DHA",
    "type": "Exhibition",
    "year": "2026",
    "key": "dubai-careers-ruya-2026"
   },
   {
-   "no": "09",
-   "title": "DP World \u2014 Ru'ya Careers",
+   "no": "10",
+   "title": "DP World — Ru'ya Careers",
    "client": "DP World",
    "type": "Exhibition",
    "year": "2022",
    "key": "dp-world-ru-ya-careers"
   },
   {
-   "no": "10",
-   "title": "EDGE \u2014 Dubai Airshow 2021",
+   "no": "11",
+   "title": "Dubai Airports Terminal C",
+   "client": "Dubai Airports",
+   "type": "Exhibition",
+   "year": "2026",
+   "key": "dxb-terminal-c"
+  },
+  {
+   "no": "12",
+   "title": "EDGE — Dubai Airshow 2021",
    "client": "EDGE Group",
    "type": "Exhibition",
    "year": "2021",
    "key": "edge"
   },
   {
-   "no": "11",
+   "no": "13",
    "title": "Afghanistan Pavilion",
    "client": "Expo 2020 Dubai",
    "type": "Pavilion",
@@ -307,7 +359,7 @@
    "key": "afghanistan"
   },
   {
-   "no": "12",
+   "no": "14",
    "title": "RISE 2026",
    "client": "Expo City Dubai",
    "type": "Exhibition",
@@ -315,7 +367,7 @@
    "key": "rise-2026"
   },
   {
-   "no": "13",
+   "no": "15",
    "title": "COP28 Sustainability Exhibition",
    "client": "Expo Dubai Group",
    "type": "Exhibition",
@@ -323,7 +375,7 @@
    "key": "cop28"
   },
   {
-   "no": "14",
+   "no": "16",
    "title": "Expo Office Extension",
    "client": "Expo Dubai Group",
    "type": "Corporate",
@@ -331,7 +383,7 @@
    "key": "expo-office"
   },
   {
-   "no": "15",
+   "no": "17",
    "title": "Stories of the Nation",
    "client": "Expo Dubai Group",
    "type": "Pavilion",
@@ -339,7 +391,7 @@
    "key": "stories"
   },
   {
-   "no": "16",
+   "no": "18",
    "title": "GROVA x Tilal 2026",
    "client": "Grova Tilal",
    "type": "Exhibition",
@@ -347,7 +399,7 @@
    "key": "grova"
   },
   {
-   "no": "17",
+   "no": "19",
    "title": "Humain @ LEAP 2026",
    "client": "Humain",
    "type": "Exhibition",
@@ -355,15 +407,23 @@
    "key": "humain"
   },
   {
-   "no": "18",
-   "title": "Humain Experience Center \u2014 KSA Executive Office",
+   "no": "20",
+   "title": "Humain Experience Center — KSA Executive Office",
    "client": "HUMAIN",
    "type": "Brand Space",
    "year": "2026",
    "key": "humain-exec"
   },
   {
-   "no": "19",
+   "no": "21",
+   "title": "Humain GHE 2026",
+   "client": "Humain",
+   "type": "Exhibition",
+   "year": "2026",
+   "key": "humain-ghe-2026"
+  },
+  {
+   "no": "22",
    "title": "JAVA Showroom",
    "client": "JAVA",
    "type": "Brand Space",
@@ -371,7 +431,7 @@
    "key": "java"
   },
   {
-   "no": "20",
+   "no": "23",
    "title": "JETEX AERO 2026",
    "client": "JETEX",
    "type": "Exhibition",
@@ -379,7 +439,7 @@
    "key": "jetex"
   },
   {
-   "no": "21",
+   "no": "24",
    "title": "Experience Center Riyadh",
    "client": "Kolaghassi",
    "type": "Exhibition",
@@ -387,7 +447,7 @@
    "key": "experience-center-riyadh"
   },
   {
-   "no": "22",
+   "no": "25",
    "title": "Trojena Mobile Pavilion",
    "client": "NEOM",
    "type": "Pavilion",
@@ -395,7 +455,7 @@
    "key": "trojena"
   },
   {
-   "no": "23",
+   "no": "26",
    "title": "Lana Experience Centre",
    "client": "Omniyat",
    "type": "Brand Space",
@@ -403,7 +463,7 @@
    "key": "lana"
   },
   {
-   "no": "24",
+   "no": "27",
    "title": "ICE Exhibition Programme",
    "client": "PIF",
    "type": "Exhibition",
@@ -411,7 +471,7 @@
    "key": "ice"
   },
   {
-   "no": "25",
+   "no": "28",
    "title": "Qiddiya Cityscape 2025",
    "client": "Qiddiya",
    "type": "Exhibition",
@@ -419,7 +479,15 @@
    "key": "qiddiya"
   },
   {
-   "no": "26",
+   "no": "29",
+   "title": "Qiddiya — Three Events",
+   "client": "Qiddiya",
+   "type": "Exhibition",
+   "year": "2026",
+   "key": "qiddiya-3-events"
+  },
+  {
+   "no": "30",
    "title": "World Defense Show 2026",
    "client": "Qudra",
    "type": "Exhibition",
@@ -427,7 +495,7 @@
    "key": "world-defense-show-2026"
   },
   {
-   "no": "27",
+   "no": "31",
    "title": "Rafal Cityscape Global 2026",
    "client": "Rafal",
    "type": "Exhibition",
@@ -435,7 +503,7 @@
    "key": "rafal"
   },
   {
-   "no": "28",
+   "no": "32",
    "title": "GITEX GLOBAL 2025",
    "client": "RTA",
    "type": "Exhibition",
@@ -443,7 +511,7 @@
    "key": "gitex-global-2025"
   },
   {
-   "no": "29",
+   "no": "33",
    "title": "Global Rail 2024",
    "client": "RTA",
    "type": "Exhibition",
@@ -451,7 +519,7 @@
    "key": "global-rail-2024"
   },
   {
-   "no": "30",
+   "no": "34",
    "title": "Saudi Capital Market Forum 2026",
    "client": "Saudi Tadawul Group",
    "type": "Conference",
@@ -459,7 +527,7 @@
    "key": "saudi-cmf"
   },
   {
-   "no": "31",
+   "no": "35",
    "title": "Tadawul Tower Marketplace",
    "client": "Saudi Tadawul Group",
    "type": "Exhibition",
@@ -467,7 +535,7 @@
    "key": "tadawul-tower"
   },
   {
-   "no": "32",
+   "no": "36",
    "title": "World Cup Bid Model",
    "client": "Saudi World Cup Bid",
    "type": "Exhibition",
@@ -475,31 +543,31 @@
    "key": "world-cup-bid-model"
   },
   {
-   "no": "33",
-   "title": "Sobha Hartland \u2014 Cityscape Global",
+   "no": "37",
+   "title": "Sobha Hartland — Cityscape Global",
    "client": "Sobha Realty",
    "type": "Exhibition",
    "year": "2018",
    "key": "sobha-hartland-cityscape-global"
   },
   {
-   "no": "34",
-   "title": "stc \u2014 GITEX 2021",
+   "no": "38",
+   "title": "stc — GITEX 2021",
    "client": "stc",
    "type": "Exhibition",
    "year": "2021",
    "key": "stc-gitex-2021"
   },
   {
-   "no": "35",
-   "title": "Tetra Pak \u2014 Gulfood Manufacturing",
+   "no": "39",
+   "title": "Tetra Pak — Gulfood Manufacturing",
    "client": "Tetra Pak",
    "type": "Exhibition",
    "year": "2019",
    "key": "tetra-pak-gulfood-manufacturing"
   },
   {
-   "no": "36",
+   "no": "40",
    "title": "Yas Holding Abu Dhabi HQ",
    "client": "Yas Holding",
    "type": "Corporate",
@@ -521,11 +589,11 @@
     },
     {
      "src": "img/troj2-02.jpg",
-     "cap": "Fog threshold \u2014 screen detail"
+     "cap": "Fog threshold — screen detail"
     },
     {
      "src": "img/troj2-03.jpg",
-     "cap": "Interior \u2014 model room detail"
+     "cap": "Interior — model room detail"
     },
     {
      "src": "img/troj2-05.jpg",
@@ -538,11 +606,11 @@
    "images": [
     {
      "src": "img/stories-kv.jpg",
-     "cap": "Front fa\u00e7ade \u2014 night"
+     "cap": "Front façade — night"
     },
     {
      "src": "img/stories-00.jpg",
-     "cap": "Main entrance \u2014 side view"
+     "cap": "Main entrance — side view"
     },
     {
      "src": "img/stories-01.jpg",
@@ -575,15 +643,15 @@
     },
     {
      "src": "img/cop28f-02.jpg",
-     "cap": "The 4th Room \u2014 detail"
+     "cap": "The 4th Room — detail"
     },
     {
      "src": "img/cop28f-03.jpg",
-     "cap": "Zone 2 \u2014 biodiversity"
+     "cap": "Zone 2 — biodiversity"
     },
     {
      "src": "img/cop28f-04.jpg",
-     "cap": "Live the City \u2014 graphic wall"
+     "cap": "Live the City — graphic wall"
     },
     {
      "src": "img/cop28f-05.jpg",
@@ -591,11 +659,11 @@
     },
     {
      "src": "img/cop28f-06.jpg",
-     "cap": "CFTP \u2014 introduction graphics"
+     "cap": "CFTP — introduction graphics"
     },
     {
      "src": "img/cop28f-07.jpg",
-     "cap": "Exhibition floor \u2014 detail"
+     "cap": "Exhibition floor — detail"
     }
    ]
   },
@@ -608,15 +676,15 @@
     },
     {
      "src": "img/cq-00.jpg",
-     "cap": "Digital Fortress \u2014 hexagon lighting installation"
+     "cap": "Digital Fortress — hexagon lighting installation"
     },
     {
      "src": "img/cq-01.jpg",
-     "cap": "Hexagon arena \u2014 full house"
+     "cap": "Hexagon arena — full house"
     },
     {
      "src": "img/cq-02.jpg",
-     "cap": "Main stage \u2014 light rig"
+     "cap": "Main stage — light rig"
     },
     {
      "src": "img/cq-03.jpg",
@@ -629,23 +697,23 @@
    "images": [
     {
      "src": "img/afghan-kv.jpg",
-     "cap": "Ground floor \u2014 reception"
+     "cap": "Ground floor — reception"
     },
     {
      "src": "img/afghan-00.jpg",
-     "cap": "Made in Afghanistan \u2014 exhibition hall"
+     "cap": "Made in Afghanistan — exhibition hall"
     },
     {
      "src": "img/afghan-02.jpg",
-     "cap": "First floor \u2014 reception & dried fruit area"
+     "cap": "First floor — reception & dried fruit area"
     },
     {
      "src": "img/afghan-03.jpg",
-     "cap": "First floor \u2014 terrace"
+     "cap": "First floor — terrace"
     },
     {
      "src": "img/afghan-04.jpg",
-     "cap": "Second floor \u2014 terrace majlis"
+     "cap": "Second floor — terrace majlis"
     }
    ]
   },
@@ -658,59 +726,59 @@
     },
     {
      "src": "img/yashq-00.jpg",
-     "cap": "Ground floor \u2014 main entrance exterior"
+     "cap": "Ground floor — main entrance exterior"
     },
     {
      "src": "img/yashq-01.jpg",
-     "cap": "Ground floor \u2014 reception entrance"
+     "cap": "Ground floor — reception entrance"
     },
     {
      "src": "img/yashq-02.jpg",
-     "cap": "Atrium \u2014 ground floor"
+     "cap": "Atrium — ground floor"
     },
     {
      "src": "img/yashq-03.jpg",
-     "cap": "Atrium terrace \u2014 seating"
+     "cap": "Atrium terrace — seating"
     },
     {
      "src": "img/yashq-04.jpg",
-     "cap": "Multipurpose space \u2014 south door"
+     "cap": "Multipurpose space — south door"
     },
     {
      "src": "img/yashq-05.jpg",
-     "cap": "Multipurpose space \u2014 interior"
+     "cap": "Multipurpose space — interior"
     },
     {
      "src": "img/yashq-06.jpg",
-     "cap": "2nd floor \u2014 sky garden"
+     "cap": "2nd floor — sky garden"
     },
     {
      "src": "img/yashq-07.jpg",
-     "cap": "2nd floor \u2014 meeting block"
+     "cap": "2nd floor — meeting block"
     },
     {
      "src": "img/yashq-08.jpg",
-     "cap": "Atrium \u2014 2nd floor, south corner"
+     "cap": "Atrium — 2nd floor, south corner"
     },
     {
      "src": "img/yashq-09.jpg",
-     "cap": "2nd floor \u2014 lounge"
+     "cap": "2nd floor — lounge"
     },
     {
      "src": "img/yashq-10.jpg",
-     "cap": "2nd floor \u2014 office, south-west"
+     "cap": "2nd floor — office, south-west"
     },
     {
      "src": "img/yashq-11.jpg",
-     "cap": "2nd floor \u2014 reception"
+     "cap": "2nd floor — reception"
     },
     {
      "src": "img/yashq-12.jpg",
-     "cap": "2nd floor \u2014 east-south meeting block"
+     "cap": "2nd floor — east-south meeting block"
     },
     {
      "src": "img/yashq-13.jpg",
-     "cap": "2nd floor \u2014 tiered seating"
+     "cap": "2nd floor — tiered seating"
     },
     {
      "src": "img/yashq-14.jpg",
@@ -726,16 +794,16 @@
     },
     {
      "src": "img/yashq-17.jpg",
-     "cap": "Tech room \u2014 presentation seating"
+     "cap": "Tech room — presentation seating"
     }
    ]
   },
   "aldar": {
-   "name": "Al Dar x Nikki Beach \u2014 RAK Sales Center",
+   "name": "Al Dar x Nikki Beach — RAK Sales Center",
    "images": [
     {
      "src": "img/aldar-kv3.jpg",
-     "cap": "Nikki Beach \u2014 signage facade"
+     "cap": "Nikki Beach — signage facade"
     },
     {
      "src": "img/aldar2-00.jpg",
@@ -747,11 +815,11 @@
     },
     {
      "src": "img/aldar2-02.jpg",
-     "cap": "Terrace \u2014 seating"
+     "cap": "Terrace — seating"
     },
     {
      "src": "img/aldar2-03.jpg",
-     "cap": "Terrace \u2014 pool view"
+     "cap": "Terrace — pool view"
     },
     {
      "src": "img/aldar2-04.jpg",
@@ -759,7 +827,7 @@
     },
     {
      "src": "img/aldar2-05.jpg",
-     "cap": "Main area \u2014 from cafe"
+     "cap": "Main area — from cafe"
     },
     {
      "src": "img/aldar2-06.jpg",
@@ -775,7 +843,7 @@
     },
     {
      "src": "img/aldar2-09.jpg",
-     "cap": "Waterfront living experience \u2014 detail"
+     "cap": "Waterfront living experience — detail"
     },
     {
      "src": "img/aldar2-10.jpg",
@@ -784,15 +852,15 @@
    ]
   },
   "adda": {
-   "name": "ADDA \u2014 GITEX 2019",
+   "name": "ADDA — GITEX 2019",
    "images": [
     {
      "src": "img/adda-kv.jpg",
-     "cap": "Perspective \u2014 arrival"
+     "cap": "Perspective — arrival"
     },
     {
      "src": "img/adda-00.jpg",
-     "cap": "Perspective \u2014 eye level"
+     "cap": "Perspective — eye level"
     },
     {
      "src": "img/adda-01.jpg",
@@ -813,23 +881,23 @@
    ]
   },
   "edge": {
-   "name": "EDGE \u2014 Dubai Airshow 2021",
+   "name": "EDGE — Dubai Airshow 2021",
    "images": [
     {
      "src": "img/edge-kv.jpg",
-     "cap": "Facade \u2014 arrival"
+     "cap": "Facade — arrival"
     },
     {
      "src": "img/edge-00.jpg",
-     "cap": "Lounge \u2014 aerial view"
+     "cap": "Lounge — aerial view"
     },
     {
      "src": "img/edge-01.jpg",
-     "cap": "Reception \u2014 'Enabling a secure future'"
+     "cap": "Reception — 'Enabling a secure future'"
     },
     {
      "src": "img/edge-02.jpg",
-     "cap": "Experience wall \u2014 templates"
+     "cap": "Experience wall — templates"
     },
     {
      "src": "img/edge-03.jpg",
@@ -849,7 +917,7 @@
     },
     {
      "src": "img/edge-07.jpg",
-     "cap": "Interior \u2014 view from mezzanine"
+     "cap": "Interior — view from mezzanine"
     },
     {
      "src": "img/edge-08.jpg",
@@ -870,7 +938,7 @@
     },
     {
      "src": "img/qc-01.jpg",
-     "cap": "Masterplan \u2014 aerial view"
+     "cap": "Masterplan — aerial view"
     },
     {
      "src": "img/fw-12.jpg",
@@ -928,7 +996,7 @@
     },
     {
      "src": "img/byd-x3.jpg",
-     "cap": "DFS Kiosk \u2014 showroom floor"
+     "cap": "DFS Kiosk — showroom floor"
     }
    ]
   },
@@ -941,11 +1009,11 @@
     },
     {
      "src": "img/java-00.jpg",
-     "cap": "Rooted in craft \u2014 materials wall"
+     "cap": "Rooted in craft — materials wall"
     },
     {
      "src": "img/java-01.jpg",
-     "cap": "Sustainability \u2014 forest immersion"
+     "cap": "Sustainability — forest immersion"
     },
     {
      "src": "img/java-02.jpg",
@@ -953,11 +1021,11 @@
     },
     {
      "src": "img/java-03.jpg",
-     "cap": "Furniture display \u2014 interactive table"
+     "cap": "Furniture display — interactive table"
     },
     {
      "src": "img/java-04.jpg",
-     "cap": "Lounge \u2014 brand moment"
+     "cap": "Lounge — brand moment"
     },
     {
      "src": "img/java-05.jpg",
@@ -970,7 +1038,7 @@
    "images": [
     {
      "src": "img/rafal-kv.jpg",
-     "cap": "Exhibition floor \u2014 full stand"
+     "cap": "Exhibition floor — full stand"
     },
     {
      "src": "img/rafal-00.jpg",
@@ -1023,7 +1091,7 @@
     },
     {
      "src": "img/expo-office-04.jpg",
-     "cap": "Town hall \u2014 tiered seating"
+     "cap": "Town hall — tiered seating"
     },
     {
      "src": "img/expo-office-05.jpg",
@@ -1044,7 +1112,7 @@
     },
     {
      "src": "img/ice-01.jpg",
-     "cap": "ICE stand \u2014 interior"
+     "cap": "ICE stand — interior"
     },
     {
      "src": "img/ice-02.jpg",
@@ -1065,15 +1133,15 @@
    ]
   },
   "humain-exec": {
-   "name": "Humain Experience Center \u2014 KSA Executive Office",
+   "name": "Humain Experience Center — KSA Executive Office",
    "images": [
     {
      "src": "img/humainx-kv.jpg",
-     "cap": "HUMAIN Voice \u2014 meet Sara"
+     "cap": "HUMAIN Voice — meet Sara"
     },
     {
      "src": "img/humainx-00.jpg",
-     "cap": "Threshold \u2014 The HUMAIN Story"
+     "cap": "Threshold — The HUMAIN Story"
     },
     {
      "src": "img/humainx-01.jpg",
@@ -1081,24 +1149,24 @@
     },
     {
      "src": "img/humainx-02.jpg",
-     "cap": "HUMAIN OS \u2014 product gallery"
+     "cap": "HUMAIN OS — product gallery"
     },
     {
      "src": "img/humainx-03.jpg",
-     "cap": "Digital twin \u2014 possibilities by sector"
+     "cap": "Digital twin — possibilities by sector"
     }
    ]
   },
   "beeah": {
-   "name": "BEEAH GROUP \u2014 Acres 2026",
+   "name": "BEEAH GROUP — Acres 2026",
    "images": [
     {
      "src": "img/beeah-kv.jpg",
-     "cap": "Living wall \u2014 'A future to call home'"
+     "cap": "Living wall — 'A future to call home'"
     },
     {
      "src": "img/beeah-00.jpg",
-     "cap": "Aerial view \u2014 full stand"
+     "cap": "Aerial view — full stand"
     },
     {
      "src": "img/beeah-01.jpg",
@@ -1106,11 +1174,11 @@
     },
     {
      "src": "img/beeah-02.jpg",
-     "cap": "Media totem \u2014 approach"
+     "cap": "Media totem — approach"
     },
     {
      "src": "img/beeah-03.jpg",
-     "cap": "Living wall \u2014 'A future to call home'"
+     "cap": "Living wall — 'A future to call home'"
     }
    ]
   },
@@ -1119,11 +1187,11 @@
    "images": [
     {
      "src": "img/grova-kv.jpg",
-     "cap": "Living wall \u2014 CRM table"
+     "cap": "Living wall — CRM table"
     },
     {
      "src": "img/grova-00.jpg",
-     "cap": "Rear approach \u2014 full stand"
+     "cap": "Rear approach — full stand"
     },
     {
      "src": "img/grova-01.jpg",
@@ -1152,15 +1220,15 @@
     },
     {
      "src": "img/tadawul-01.jpg",
-     "cap": "Market open \u2014 trade screen"
+     "cap": "Market open — trade screen"
     },
     {
      "src": "img/tadawul-02.jpg",
-     "cap": "Lounge \u2014 from boardroom"
+     "cap": "Lounge — from boardroom"
     },
     {
      "src": "img/tadawul-03.jpg",
-     "cap": "Arrival \u2014 from the lift"
+     "cap": "Arrival — from the lift"
     }
    ]
   },
@@ -1181,7 +1249,7 @@
     },
     {
      "src": "img/jetex-02.jpg",
-     "cap": "Leisure \u2014 golf simulator"
+     "cap": "Leisure — golf simulator"
     },
     {
      "src": "img/jetex-03.jpg",
@@ -1189,11 +1257,11 @@
     },
     {
      "src": "img/jetex-04.jpg",
-     "cap": "Exhibition floor \u2014 full stand"
+     "cap": "Exhibition floor — full stand"
     },
     {
      "src": "img/jetex-05.jpg",
-     "cap": "Exhibition floor \u2014 aerial"
+     "cap": "Exhibition floor — aerial"
     }
    ]
   },
@@ -1270,7 +1338,7 @@
    ]
   },
   "dubai-careers-ruya-2026": {
-   "name": "Dubai Careers \u2014 RUYA 2026",
+   "name": "Dubai Careers — RUYA 2026",
    "images": [
     {
      "src": "img/fw-03.jpg",
@@ -1333,7 +1401,7 @@
    ]
   },
   "stc-gitex-2021": {
-   "name": "stc \u2014 GITEX 2021",
+   "name": "stc — GITEX 2021",
    "images": [
     {
      "src": "img/lg-01.jpg",
@@ -1342,7 +1410,7 @@
    ]
   },
   "dp-world-ru-ya-careers": {
-   "name": "DP World \u2014 Ru'ya Careers",
+   "name": "DP World — Ru'ya Careers",
    "images": [
     {
      "src": "img/lg-dpworld.jpg",
@@ -1351,7 +1419,7 @@
    ]
   },
   "tetra-pak-gulfood-manufacturing": {
-   "name": "Tetra Pak \u2014 Gulfood Manufacturing",
+   "name": "Tetra Pak — Gulfood Manufacturing",
    "images": [
     {
      "src": "img/lg-03.jpg",
@@ -1360,11 +1428,151 @@
    ]
   },
   "sobha-hartland-cityscape-global": {
-   "name": "Sobha Hartland \u2014 Cityscape Global",
+   "name": "Sobha Hartland — Cityscape Global",
    "images": [
     {
      "src": "img/lg-06.jpg",
      "cap": "Sobha Realty"
+    }
+   ]
+  },
+  "dxb-terminal-c": {
+   "name": "Dubai Airports Terminal C",
+   "images": [
+    {
+     "src": "sources/dxb-terminal-c/00.jpg",
+     "cap": "Dubai Airports Terminal C"
+    },
+    {
+     "src": "sources/dxb-terminal-c/01.jpg",
+     "cap": "Dubai Airports Terminal C"
+    },
+    {
+     "src": "sources/dxb-terminal-c/02.jpg",
+     "cap": "Dubai Airports Terminal C"
+    },
+    {
+     "src": "sources/dxb-terminal-c/03.jpg",
+     "cap": "Dubai Airports Terminal C"
+    },
+    {
+     "src": "sources/dxb-terminal-c/04.jpg",
+     "cap": "Dubai Airports Terminal C"
+    },
+    {
+     "src": "sources/dxb-terminal-c/05.jpg",
+     "cap": "Dubai Airports Terminal C"
+    }
+   ]
+  },
+  "humain-ghe-2026": {
+   "name": "Humain GHE 2026",
+   "images": [
+    {
+     "src": "sources/humain-ghe-2026/00.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/01.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/02.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/03.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/04.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/05.jpg",
+     "cap": "Humain GHE 2026"
+    },
+    {
+     "src": "sources/humain-ghe-2026/06.jpg",
+     "cap": "Humain GHE 2026"
+    }
+   ]
+  },
+  "marina-gate-av": {
+   "name": "Marina Gate Experience Center",
+   "images": [
+    {
+     "src": "sources/marina-gate-av/00.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/01.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/02.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/03.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/04.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/05.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/06.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/07.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/08.jpg",
+     "cap": "Marina Gate Experience Center"
+    },
+    {
+     "src": "sources/marina-gate-av/09.jpg",
+     "cap": "Marina Gate Experience Center"
+    }
+   ]
+  },
+  "qiddiya-3-events": {
+   "name": "Qiddiya — Three Events",
+   "images": [
+    {
+     "src": "sources/qiddiya-3-events/00.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/01.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/02.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/03.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/04.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/05.jpg",
+     "cap": "Qiddiya — Three Events"
+    },
+    {
+     "src": "sources/qiddiya-3-events/06.jpg",
+     "cap": "Qiddiya — Three Events"
     }
    ]
   }
@@ -1372,11 +1580,11 @@
  "sectors": [
   {
    "name": "Exhibitions",
-   "count": "25 projects"
+   "count": "28 projects"
   },
   {
    "name": "Brand Spaces",
-   "count": "05 projects"
+   "count": "06 projects"
   },
   {
    "name": "Pavilions",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate WebP derivatives for every image the live portfolio references.
 
-Sources live in /home/mnm/AI_Lab/Workspace/portfolio/img and are already
+Sources live in /workspace/portfolio/img and are already
 web-sized (1100x614 and 1600x900, ~19.5 MB total). They are read only, never
 modified. Two derivatives are written per source:
 
@@ -21,7 +21,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_ROOT = Path("/home/mnm/AI_Lab/Workspace/portfolio")
+SOURCE_ROOT = Path("/workspace/portfolio")
 OUT_ROOT = ROOT / "assets" / "img"
 
 WIDTHS = {640: 82, 1600: 80}
@@ -57,7 +57,7 @@ def collect_sources():
 
 
 def build_one(rel_path, force=False):
-    source = SOURCE_ROOT / rel_path
+    source = (ROOT if rel_path.startswith("sources/") else SOURCE_ROOT) / rel_path
     if not source.exists():
         return None, f"missing source: {rel_path}"
 
