@@ -131,150 +131,6 @@
    "w": 640
   }
  },
- "img/aldar-kv3.jpg": {
-  "1600": {
-   "h": 619,
-   "src": "assets/img/aldar-kv3-da6ece-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 360,
-   "src": "assets/img/aldar-kv3-da6ece-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-00.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-00-1dc7a5-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-00-1dc7a5-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-01.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-01-12b135-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-01-12b135-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-02.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-02-9726c1-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-02-9726c1-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-03.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-03-d0aa00-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-03-d0aa00-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-04.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-04-6a4178-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-04-6a4178-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-05.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-05-6c250b-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-05-6c250b-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-06.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-06-ff8688-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-06-ff8688-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-07.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-07-14c51c-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-07-14c51c-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-08.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-08-e98ac2-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-08-e98ac2-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-09.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-09-5a910c-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-09-5a910c-640.webp",
-   "w": 640
-  }
- },
- "img/aldar2-10.jpg": {
-  "1600": {
-   "h": 614,
-   "src": "assets/img/aldar2-10-fbdc0c-1600.webp",
-   "w": 1100
-  },
-  "640": {
-   "h": 357,
-   "src": "assets/img/aldar2-10-fbdc0c-640.webp",
-   "w": 640
-  }
- },
  "img/beeah-00.jpg": {
   "1600": {
    "h": 619,
@@ -1952,6 +1808,258 @@
   "640": {
    "h": 360,
    "src": "assets/img/yashq-kv-317ecd-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/00.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/00-4f42d4-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/00-4f42d4-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/01.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/01-835397-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/01-835397-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/02.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/02-08fd84-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/02-08fd84-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/03.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/03-bb870f-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/03-bb870f-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/04.jpg": {
+  "1600": {
+   "h": 1194,
+   "src": "assets/img/04-01c9cf-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 478,
+   "src": "assets/img/04-01c9cf-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/05.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/05-b56a6b-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/05-b56a6b-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/06.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/06-128342-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/06-128342-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/07.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/07-55a6e2-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/07-55a6e2-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/08.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/08-358891-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/08-358891-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/09.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/09-0d8855-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/09-0d8855-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/10.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/10-1903c3-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/10-1903c3-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/11.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/11-207024-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/11-207024-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/12.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/12-56d725-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/12-56d725-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/13.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/13-f6896e-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/13-f6896e-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/14.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/14-14a112-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/14-14a112-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/15.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/15-4b0764-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/15-4b0764-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/16.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/16-721a4f-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/16-721a4f-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/17.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/17-098141-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/17-098141-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/18.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/18-b61180-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/18-b61180-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/19.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/19-031a96-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/19-031a96-640.webp",
+   "w": 640
+  }
+ },
+ "sources/aldar/20.jpg": {
+  "1600": {
+   "h": 893,
+   "src": "assets/img/20-496f75-1600.webp",
+   "w": 1600
+  },
+  "640": {
+   "h": 357,
+   "src": "assets/img/20-496f75-640.webp",
    "w": 640
   }
  },

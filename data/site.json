@@ -61,7 +61,7 @@
    "client": "Aldar",
    "type": "Brand Space",
    "year": "2024",
-   "kv": "img/aldar-kv3.jpg"
+   "kv": "sources/aldar/00.jpg"
   },
   {
    "key": "humain-exec",
@@ -768,52 +768,88 @@
    "name": "Al Dar x Nikki Beach — RAK Sales Center",
    "images": [
     {
-     "src": "img/aldar-kv3.jpg",
-     "cap": "Nikki Beach — signage facade"
+     "src": "sources/aldar/00.jpg",
+     "cap": "Exterior entrance — night"
     },
     {
-     "src": "img/aldar2-00.jpg",
+     "src": "sources/aldar/01.jpg",
      "cap": "Aerial view from beach"
     },
     {
-     "src": "img/aldar2-01.jpg",
-     "cap": "Shaded lounge terrace"
+     "src": "sources/aldar/02.jpg",
+     "cap": "Exterior — dusk"
     },
     {
-     "src": "img/aldar2-02.jpg",
-     "cap": "Terrace — seating"
+     "src": "sources/aldar/03.jpg",
+     "cap": "Beachfront pavilion"
     },
     {
-     "src": "img/aldar2-03.jpg",
-     "cap": "Terrace — pool view"
+     "src": "sources/aldar/04.jpg",
+     "cap": "VIP entrance"
     },
     {
-     "src": "img/aldar2-04.jpg",
-     "cap": "Gallery wall"
+     "src": "sources/aldar/05.jpg",
+     "cap": "Site main entrance"
     },
     {
-     "src": "img/aldar2-05.jpg",
-     "cap": "Main area — from cafe"
+     "src": "sources/aldar/06.jpg",
+     "cap": "Sail signage"
     },
     {
-     "src": "img/aldar2-06.jpg",
-     "cap": "Multipurpose sales seating"
+     "src": "sources/aldar/07.jpg",
+     "cap": "Site front approach"
     },
     {
-     "src": "img/aldar2-07.jpg",
+     "src": "sources/aldar/08.jpg",
+     "cap": "Main entrance"
+    },
+    {
+     "src": "sources/aldar/09.jpg",
+     "cap": "Reception area"
+    },
+    {
+     "src": "sources/aldar/10.jpg",
+     "cap": "Main area — from VIP"
+    },
+    {
+     "src": "sources/aldar/11.jpg",
+     "cap": "Main area — from offices"
+    },
+    {
+     "src": "sources/aldar/12.jpg",
      "cap": "Project model"
     },
     {
-     "src": "img/aldar2-08.jpg",
-     "cap": "Waterfront living experience"
+     "src": "sources/aldar/13.jpg",
+     "cap": "Gallery wall"
     },
     {
-     "src": "img/aldar2-09.jpg",
-     "cap": "Waterfront living experience — detail"
+     "src": "sources/aldar/14.jpg",
+     "cap": "Gallery wall — back side"
     },
     {
-     "src": "img/aldar2-10.jpg",
-     "cap": "Reception area"
+     "src": "sources/aldar/15.jpg",
+     "cap": "Café"
+    },
+    {
+     "src": "sources/aldar/16.jpg",
+     "cap": "Kids zone"
+    },
+    {
+     "src": "sources/aldar/17.jpg",
+     "cap": "Lounge seating"
+    },
+    {
+     "src": "sources/aldar/18.jpg",
+     "cap": "Outdoor café area"
+    },
+    {
+     "src": "sources/aldar/19.jpg",
+     "cap": "Beach terrace"
+    },
+    {
+     "src": "sources/aldar/20.jpg",
+     "cap": "Terrace seating"
     }
    ]
   },

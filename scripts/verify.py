@@ -32,13 +32,13 @@ featured, rows, galleries = site["featured"], site["index"], site["galleries"]
 
 # --- Shape matches the live site ---
 ADDED = {"dxb-terminal-c", "qiddiya-3-events"}  # new projects (featured: appended at end)
-REPLACED = {"marina", "humain"}  # galleries swapped for new selections
+REPLACED = {"marina", "humain", "aldar"}  # galleries swapped for new selections
 NEW = len(ADDED)  # projects added after the live-site extract (scripts/add_project.py)
 check(len(featured) == 24 + NEW, f"expected {24 + NEW} featured cards, got {len(featured)}")
 check(len(rows) == 36 + NEW, f"expected 36 index rows, got {len(rows)}")
 check(len(galleries) == 36 + NEW, f"expected 36 galleries, got {len(galleries)}")
 check(
-    sum(len(g["images"]) for k, g in galleries.items() if k not in ADDED | REPLACED) == 170 - 8,  # live total minus marina (4) and humain (4), which were replaced
+    sum(len(g["images"]) for k, g in galleries.items() if k not in ADDED | REPLACED) == 170 - 8 - 12,  # live total minus marina (4), humain (4) and aldar (12), which were replaced
     "expected 170 gallery images in total",
 )
 check(len(site["sectors"]) == 5, "expected 5 sectors")
